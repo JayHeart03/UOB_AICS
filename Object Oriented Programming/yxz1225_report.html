@@ -1,0 +1,4084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 2 marks</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <style>
+        * {
+            padding-top: 10px;
+            padding-left: 25px;
+            /*background-color: #1c1c1c;*/
+        }
+        pre {
+            background-color: #363636;
+            color: #c7c7c7;
+            border-radius: 10px;
+        }
+        pre span {
+            color: #f0960e;
+        }
+        table td, table td * {
+            vertical-align: top;
+            horizontal-align: left;
+            padding-right: 40px;
+        }
+        #correct {
+            font-size: 15px;
+            color: green;
+        }
+        #incorrect {
+            font-size: 15px;
+            color:  red;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+<h1 class="display-4">Assignment 2</h1>
+<h2>Version Jaguar (NCR)</h2>
+<h2>Student: yxz1225</h2><h3>Total mark: 100/100</h3><div class="d-flex align-items-start"><div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical"><button class="nav-link active" id="v-pills-ovv-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ovv" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Overview</button><button class="nav-link" id="v-pills-subsum-tab" data-bs-toggle="pill" data-bs-target="#v-pills-subsum" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Submission Summary</button><button class="nav-link" id="v-pills-compreport-tab" data-bs-toggle="pill" data-bs-target="#v-pills-compreport" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Compiler Report</button><button class="nav-link" id="v-pills-q1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-q1" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Question 1</button><button class="nav-link" id="v-pills-q2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-q2" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Question 2</button><button class="nav-link" id="v-pills-q3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-q3" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Question 3</button><button class="nav-link" id="v-pills-q4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-q4" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Question 4</button></div><div class="tab-content" id="v-pills-tabContent"><div class="tab-pane fade show active" id="v-pills-ovv" role="tabpanel" aria-labelledby="v-pills-ovv-tab"><h3>Overview</h3><p>Question 1 - Marks: 5/5</p><p>Question 2 - Marks: 10/10</p><p>Question 3 - Marks: 37/37</p><p>Question 4 - Marks: 48/48</p></div><div class="tab-pane fade" id="v-pills-subsum" role="tabpanel" aria-labelledby="v-pills-subsum-tab"><h3>Submission Summary</h3><pre>yxz1225/Solution
+
+├── Assignment212.iml
+
+├── expectedOutputs
+
+│   ├── 000ExpectedOutput.txt
+
+│   ├── 100ExpectedOutput.txt
+
+│   ├── 101ExpectedOutput.txt
+
+│   ├── 200ExpectedOutput.txt
+
+│   ├── 300ExpectedOutput.txt
+
+│   ├── 301ExpectedOutput.txt
+
+│   ├── 302ExpectedOutput.txt
+
+│   ├── 303ExpectedOutput.txt
+
+│   ├── 304ExpectedOutput.txt
+
+│   ├── 500ExpectedOutput.txt
+
+│   └── 501ExpectedOutput.txt
+
+├── src
+
+│   ├── BingoCard.java
+
+│   ├── BingoController.java
+
+│   ├── BingoRunner.java
+
+│   ├── Defaults.java
+
+│   └── Toolkit.java
+
+├── StudentOutput.txt
+
+└── testInputs
+
+    ├── 000TestInput.txt
+
+    ├── 100TestInput.txt
+
+    ├── 101TestInput.txt
+
+    ├── 200TestInput.txt
+
+    ├── 300TestInput.txt
+
+    ├── 301TestInput.txt
+
+    ├── 302TestInput.txt
+
+    ├── 303TestInput.txt
+
+    ├── 304TestInput.txt
+
+    ├── 500TestInput.txt
+
+    └── 501TestInput.txt
+
+
+
+3 directories, 29 files
+
+</pre><br><p>Submission structure looks correct!</p></div><div class="tab-pane fade" id="v-pills-compreport" role="tabpanel" aria-labelledby="v-pills-compreport-tab"><h3>Compiler report</h3><pre>No compile issues!</pre><br></div><div class="tab-pane fade" id="v-pills-q1" role="tabpanel" aria-labelledby="v-pills-q1-tab"><h3>Question 1 - Marks: 5/5</h3><h4>Test 305</h4><p>Input data:<pre>3
+3 56 2 54 29 89 51 1 5 45 23 78 45 47 33 38
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 3,•56,•2,•54,•29,•89,•51,•1,•5,•45,•23,•78,•45,•47,•33,•38
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 3,•56,•2,•54,•29,•89,•51,•1,•5,•45,•23,•78,•45,•47,•33,•38
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 5.00%</p></td></tr></table><hr></div><div class="tab-pane fade" id="v-pills-q2" role="tabpanel" aria-labelledby="v-pills-q2-tab"><h3>Question 2 - Marks: 10/10</h3><h4>Test 000</h4><p>Input data:<pre>0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 10.00%</p></td></tr></table><hr></div><div class="tab-pane fade" id="v-pills-q3" role="tabpanel" aria-labelledby="v-pills-q3-tab"><h3>Question 3 - Marks: 37/37</h3><h4>Test 307</h4><p>Input data:<pre>3
+7 8 9 10 11 12 13 14 15 16 31 32 35 37 38 42
+4
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 7,•8,•9,•10,•11,•12,•13,•14,•15,•16,•31,•32,•35,•37,•38,•42
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Card••0•numbers:
+019 : •7••8••9•10
+020 : 11•12•13•14
+021 : 15•16•31•32
+022 : 35•37•38•42
+023 : •0:•Exit
+024 : •1:•Play•bingo
+025 : •2:•Set•number•separator
+026 : •3:•Create•a•bingo•card
+027 : •4:•List•existing•cards
+028 : •5:•Set•bingo•card•size
+029 : 
+030 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 7,•8,•9,•10,•11,•12,•13,•14,•15,•16,•31,•32,•35,•37,•38,•42
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Card••0•numbers:
+019 : •7••8••9•10
+020 : 11•12•13•14
+021 : 15•16•31•32
+022 : 35•37•38•42
+023 : •0:•Exit
+024 : •1:•Play•bingo
+025 : •2:•Set•number•separator
+026 : •3:•Create•a•bingo•card
+027 : •4:•List•existing•cards
+028 : •5:•Set•bingo•card•size
+029 : 
+030 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 9.00%</p></td></tr></table><hr><h4>Test 310</h4><p>Input data:<pre>5
+5
+4
+3
+34 35 36 37 38 39 40 49 48 47 46 55 54 53 52 51 31 22 24 26
+4
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•5•rows•X•4•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•20•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 34,•35,•36,•37,•38,•39,•40,•49,•48,•47,•46,•55,•54,•53,•52,•51,•31,•22,•24,•26
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Card••0•numbers:
+029 : 34•35•36•37
+030 : 38•39•40•49
+031 : 48•47•46•55
+032 : 54•53•52•51
+033 : 31•22•24•26
+034 : •0:•Exit
+035 : •1:•Play•bingo
+036 : •2:•Set•number•separator
+037 : •3:•Create•a•bingo•card
+038 : •4:•List•existing•cards
+039 : •5:•Set•bingo•card•size
+040 : 
+041 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•5•rows•X•4•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•20•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 34,•35,•36,•37,•38,•39,•40,•49,•48,•47,•46,•55,•54,•53,•52,•51,•31,•22,•24,•26
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Card••0•numbers:
+029 : 34•35•36•37
+030 : 38•39•40•49
+031 : 48•47•46•55
+032 : 54•53•52•51
+033 : 31•22•24•26
+034 : •0:•Exit
+035 : •1:•Play•bingo
+036 : •2:•Set•number•separator
+037 : •3:•Create•a•bingo•card
+038 : •4:•List•existing•cards
+039 : •5:•Set•bingo•card•size
+040 : 
+041 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 4.00%</p></td></tr></table><hr><h4>Test 102</h4><p>Input data:<pre>3
+4 5 6 7 8 9 10 12 14 16 18 20 21 26 28 29
+3
+31 32 33 34 35 36 37 38 39 40 51 52 53 54 55 56
+3
+60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 57
+1
+53
+72
+60
+61
+62
+63
+7
+8
+9
+64
+65
+66
+34
+35
+36
+67
+68
+69
+70
+71
+28
+29
+73
+74
+55
+57
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 4,•5,•6,•7,•8,•9,•10,•12,•14,•16,•18,•20,•21,•26,•28,•29
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•16•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 31,•32,•33,•34,•35,•36,•37,•38,•39,•40,•51,•52,•53,•54,•55,•56
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Enter•16•numbers•for•your•card•(separated•by•'•')
+029 : You•entered
+030 : 60,•61,•62,•63,•64,•65,•66,•67,•68,•69,•70,•71,•72,•73,•74,•57
+031 : •0:•Exit
+032 : •1:•Play•bingo
+033 : •2:•Set•number•separator
+034 : •3:•Create•a•bingo•card
+035 : •4:•List•existing•cards
+036 : •5:•Set•bingo•card•size
+037 : 
+038 : Eyes•down,•look•in!
+039 : Enter•the•next•number
+040 : Checking•card•0•for•53
+041 : Number•53•not•on•this•card
+042 : Checking•card•1•for•53
+043 : Marked•off•53
+044 : Checking•card•2•for•53
+045 : Number•53•not•on•this•card
+046 : Enter•the•next•number
+047 : Checking•card•0•for•72
+048 : Number•72•not•on•this•card
+049 : Checking•card•1•for•72
+050 : Number•72•not•on•this•card
+051 : Checking•card•2•for•72
+052 : Marked•off•72
+053 : Enter•the•next•number
+054 : Checking•card•0•for•60
+055 : Number•60•not•on•this•card
+056 : Checking•card•1•for•60
+057 : Number•60•not•on•this•card
+058 : Checking•card•2•for•60
+059 : Marked•off•60
+060 : Enter•the•next•number
+061 : Checking•card•0•for•61
+062 : Number•61•not•on•this•card
+063 : Checking•card•1•for•61
+064 : Number•61•not•on•this•card
+065 : Checking•card•2•for•61
+066 : Marked•off•61
+067 : Enter•the•next•number
+068 : Checking•card•0•for•62
+069 : Number•62•not•on•this•card
+070 : Checking•card•1•for•62
+071 : Number•62•not•on•this•card
+072 : Checking•card•2•for•62
+073 : Marked•off•62
+074 : Enter•the•next•number
+075 : Checking•card•0•for•63
+076 : Number•63•not•on•this•card
+077 : Checking•card•1•for•63
+078 : Number•63•not•on•this•card
+079 : Checking•card•2•for•63
+080 : Marked•off•63
+081 : Enter•the•next•number
+082 : Checking•card•0•for•7
+083 : Marked•off•7
+084 : Checking•card•1•for•7
+085 : Number•7•not•on•this•card
+086 : Checking•card•2•for•7
+087 : Number•7•not•on•this•card
+088 : Enter•the•next•number
+089 : Checking•card•0•for•8
+090 : Marked•off•8
+091 : Checking•card•1•for•8
+092 : Number•8•not•on•this•card
+093 : Checking•card•2•for•8
+094 : Number•8•not•on•this•card
+095 : Enter•the•next•number
+096 : Checking•card•0•for•9
+097 : Marked•off•9
+098 : Checking•card•1•for•9
+099 : Number•9•not•on•this•card
+100 : Checking•card•2•for•9
+101 : Number•9•not•on•this•card
+102 : Enter•the•next•number
+103 : Checking•card•0•for•64
+104 : Number•64•not•on•this•card
+105 : Checking•card•1•for•64
+106 : Number•64•not•on•this•card
+107 : Checking•card•2•for•64
+108 : Marked•off•64
+109 : Enter•the•next•number
+110 : Checking•card•0•for•65
+111 : Number•65•not•on•this•card
+112 : Checking•card•1•for•65
+113 : Number•65•not•on•this•card
+114 : Checking•card•2•for•65
+115 : Marked•off•65
+116 : Enter•the•next•number
+117 : Checking•card•0•for•66
+118 : Number•66•not•on•this•card
+119 : Checking•card•1•for•66
+120 : Number•66•not•on•this•card
+121 : Checking•card•2•for•66
+122 : Marked•off•66
+123 : Enter•the•next•number
+124 : Checking•card•0•for•34
+125 : Number•34•not•on•this•card
+126 : Checking•card•1•for•34
+127 : Marked•off•34
+128 : Checking•card•2•for•34
+129 : Number•34•not•on•this•card
+130 : Enter•the•next•number
+131 : Checking•card•0•for•35
+132 : Number•35•not•on•this•card
+133 : Checking•card•1•for•35
+134 : Marked•off•35
+135 : Checking•card•2•for•35
+136 : Number•35•not•on•this•card
+137 : Enter•the•next•number
+138 : Checking•card•0•for•36
+139 : Number•36•not•on•this•card
+140 : Checking•card•1•for•36
+141 : Marked•off•36
+142 : Checking•card•2•for•36
+143 : Number•36•not•on•this•card
+144 : Enter•the•next•number
+145 : Checking•card•0•for•67
+146 : Number•67•not•on•this•card
+147 : Checking•card•1•for•67
+148 : Number•67•not•on•this•card
+149 : Checking•card•2•for•67
+150 : Marked•off•67
+151 : Enter•the•next•number
+152 : Checking•card•0•for•68
+153 : Number•68•not•on•this•card
+154 : Checking•card•1•for•68
+155 : Number•68•not•on•this•card
+156 : Checking•card•2•for•68
+157 : Marked•off•68
+158 : Enter•the•next•number
+159 : Checking•card•0•for•69
+160 : Number•69•not•on•this•card
+161 : Checking•card•1•for•69
+162 : Number•69•not•on•this•card
+163 : Checking•card•2•for•69
+164 : Marked•off•69
+165 : Enter•the•next•number
+166 : Checking•card•0•for•70
+167 : Number•70•not•on•this•card
+168 : Checking•card•1•for•70
+169 : Number•70•not•on•this•card
+170 : Checking•card•2•for•70
+171 : Marked•off•70
+172 : Enter•the•next•number
+173 : Checking•card•0•for•71
+174 : Number•71•not•on•this•card
+175 : Checking•card•1•for•71
+176 : Number•71•not•on•this•card
+177 : Checking•card•2•for•71
+178 : Marked•off•71
+179 : Enter•the•next•number
+180 : Checking•card•0•for•28
+181 : Marked•off•28
+182 : Checking•card•1•for•28
+183 : Number•28•not•on•this•card
+184 : Checking•card•2•for•28
+185 : Number•28•not•on•this•card
+186 : Enter•the•next•number
+187 : Checking•card•0•for•29
+188 : Marked•off•29
+189 : Checking•card•1•for•29
+190 : Number•29•not•on•this•card
+191 : Checking•card•2•for•29
+192 : Number•29•not•on•this•card
+193 : Enter•the•next•number
+194 : Checking•card•0•for•73
+195 : Number•73•not•on•this•card
+196 : Checking•card•1•for•73
+197 : Number•73•not•on•this•card
+198 : Checking•card•2•for•73
+199 : Marked•off•73
+200 : Enter•the•next•number
+201 : Checking•card•0•for•74
+202 : Number•74•not•on•this•card
+203 : Checking•card•1•for•74
+204 : Number•74•not•on•this•card
+205 : Checking•card•2•for•74
+206 : Marked•off•74
+207 : Enter•the•next•number
+208 : Checking•card•0•for•55
+209 : Number•55•not•on•this•card
+210 : Checking•card•1•for•55
+211 : Marked•off•55
+212 : Checking•card•2•for•55
+213 : Number•55•not•on•this•card
+214 : Enter•the•next•number
+215 : Checking•card•0•for•57
+216 : Number•57•not•on•this•card
+217 : Checking•card•1•for•57
+218 : Number•57•not•on•this•card
+219 : Checking•card•2•for•57
+220 : Marked•off•57
+221 : And•the•winner•is•card•2
+222 : •0:•Exit
+223 : •1:•Play•bingo
+224 : •2:•Set•number•separator
+225 : •3:•Create•a•bingo•card
+226 : •4:•List•existing•cards
+227 : •5:•Set•bingo•card•size
+228 : 
+229 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 4,•5,•6,•7,•8,•9,•10,•12,•14,•16,•18,•20,•21,•26,•28,•29
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•16•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 31,•32,•33,•34,•35,•36,•37,•38,•39,•40,•51,•52,•53,•54,•55,•56
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Enter•16•numbers•for•your•card•(separated•by•'•')
+029 : You•entered
+030 : 60,•61,•62,•63,•64,•65,•66,•67,•68,•69,•70,•71,•72,•73,•74,•57
+031 : •0:•Exit
+032 : •1:•Play•bingo
+033 : •2:•Set•number•separator
+034 : •3:•Create•a•bingo•card
+035 : •4:•List•existing•cards
+036 : •5:•Set•bingo•card•size
+037 : 
+038 : Eyes•down,•look•in!
+039 : Enter•the•next•number
+040 : Checking•card•0•for•53
+041 : Number•53•not•on•this•card
+042 : Checking•card•1•for•53
+043 : Marked•off•53
+044 : Checking•card•2•for•53
+045 : Number•53•not•on•this•card
+046 : Enter•the•next•number
+047 : Checking•card•0•for•72
+048 : Number•72•not•on•this•card
+049 : Checking•card•1•for•72
+050 : Number•72•not•on•this•card
+051 : Checking•card•2•for•72
+052 : Marked•off•72
+053 : Enter•the•next•number
+054 : Checking•card•0•for•60
+055 : Number•60•not•on•this•card
+056 : Checking•card•1•for•60
+057 : Number•60•not•on•this•card
+058 : Checking•card•2•for•60
+059 : Marked•off•60
+060 : Enter•the•next•number
+061 : Checking•card•0•for•61
+062 : Number•61•not•on•this•card
+063 : Checking•card•1•for•61
+064 : Number•61•not•on•this•card
+065 : Checking•card•2•for•61
+066 : Marked•off•61
+067 : Enter•the•next•number
+068 : Checking•card•0•for•62
+069 : Number•62•not•on•this•card
+070 : Checking•card•1•for•62
+071 : Number•62•not•on•this•card
+072 : Checking•card•2•for•62
+073 : Marked•off•62
+074 : Enter•the•next•number
+075 : Checking•card•0•for•63
+076 : Number•63•not•on•this•card
+077 : Checking•card•1•for•63
+078 : Number•63•not•on•this•card
+079 : Checking•card•2•for•63
+080 : Marked•off•63
+081 : Enter•the•next•number
+082 : Checking•card•0•for•7
+083 : Marked•off•7
+084 : Checking•card•1•for•7
+085 : Number•7•not•on•this•card
+086 : Checking•card•2•for•7
+087 : Number•7•not•on•this•card
+088 : Enter•the•next•number
+089 : Checking•card•0•for•8
+090 : Marked•off•8
+091 : Checking•card•1•for•8
+092 : Number•8•not•on•this•card
+093 : Checking•card•2•for•8
+094 : Number•8•not•on•this•card
+095 : Enter•the•next•number
+096 : Checking•card•0•for•9
+097 : Marked•off•9
+098 : Checking•card•1•for•9
+099 : Number•9•not•on•this•card
+100 : Checking•card•2•for•9
+101 : Number•9•not•on•this•card
+102 : Enter•the•next•number
+103 : Checking•card•0•for•64
+104 : Number•64•not•on•this•card
+105 : Checking•card•1•for•64
+106 : Number•64•not•on•this•card
+107 : Checking•card•2•for•64
+108 : Marked•off•64
+109 : Enter•the•next•number
+110 : Checking•card•0•for•65
+111 : Number•65•not•on•this•card
+112 : Checking•card•1•for•65
+113 : Number•65•not•on•this•card
+114 : Checking•card•2•for•65
+115 : Marked•off•65
+116 : Enter•the•next•number
+117 : Checking•card•0•for•66
+118 : Number•66•not•on•this•card
+119 : Checking•card•1•for•66
+120 : Number•66•not•on•this•card
+121 : Checking•card•2•for•66
+122 : Marked•off•66
+123 : Enter•the•next•number
+124 : Checking•card•0•for•34
+125 : Number•34•not•on•this•card
+126 : Checking•card•1•for•34
+127 : Marked•off•34
+128 : Checking•card•2•for•34
+129 : Number•34•not•on•this•card
+130 : Enter•the•next•number
+131 : Checking•card•0•for•35
+132 : Number•35•not•on•this•card
+133 : Checking•card•1•for•35
+134 : Marked•off•35
+135 : Checking•card•2•for•35
+136 : Number•35•not•on•this•card
+137 : Enter•the•next•number
+138 : Checking•card•0•for•36
+139 : Number•36•not•on•this•card
+140 : Checking•card•1•for•36
+141 : Marked•off•36
+142 : Checking•card•2•for•36
+143 : Number•36•not•on•this•card
+144 : Enter•the•next•number
+145 : Checking•card•0•for•67
+146 : Number•67•not•on•this•card
+147 : Checking•card•1•for•67
+148 : Number•67•not•on•this•card
+149 : Checking•card•2•for•67
+150 : Marked•off•67
+151 : Enter•the•next•number
+152 : Checking•card•0•for•68
+153 : Number•68•not•on•this•card
+154 : Checking•card•1•for•68
+155 : Number•68•not•on•this•card
+156 : Checking•card•2•for•68
+157 : Marked•off•68
+158 : Enter•the•next•number
+159 : Checking•card•0•for•69
+160 : Number•69•not•on•this•card
+161 : Checking•card•1•for•69
+162 : Number•69•not•on•this•card
+163 : Checking•card•2•for•69
+164 : Marked•off•69
+165 : Enter•the•next•number
+166 : Checking•card•0•for•70
+167 : Number•70•not•on•this•card
+168 : Checking•card•1•for•70
+169 : Number•70•not•on•this•card
+170 : Checking•card•2•for•70
+171 : Marked•off•70
+172 : Enter•the•next•number
+173 : Checking•card•0•for•71
+174 : Number•71•not•on•this•card
+175 : Checking•card•1•for•71
+176 : Number•71•not•on•this•card
+177 : Checking•card•2•for•71
+178 : Marked•off•71
+179 : Enter•the•next•number
+180 : Checking•card•0•for•28
+181 : Marked•off•28
+182 : Checking•card•1•for•28
+183 : Number•28•not•on•this•card
+184 : Checking•card•2•for•28
+185 : Number•28•not•on•this•card
+186 : Enter•the•next•number
+187 : Checking•card•0•for•29
+188 : Marked•off•29
+189 : Checking•card•1•for•29
+190 : Number•29•not•on•this•card
+191 : Checking•card•2•for•29
+192 : Number•29•not•on•this•card
+193 : Enter•the•next•number
+194 : Checking•card•0•for•73
+195 : Number•73•not•on•this•card
+196 : Checking•card•1•for•73
+197 : Number•73•not•on•this•card
+198 : Checking•card•2•for•73
+199 : Marked•off•73
+200 : Enter•the•next•number
+201 : Checking•card•0•for•74
+202 : Number•74•not•on•this•card
+203 : Checking•card•1•for•74
+204 : Number•74•not•on•this•card
+205 : Checking•card•2•for•74
+206 : Marked•off•74
+207 : Enter•the•next•number
+208 : Checking•card•0•for•55
+209 : Number•55•not•on•this•card
+210 : Checking•card•1•for•55
+211 : Marked•off•55
+212 : Checking•card•2•for•55
+213 : Number•55•not•on•this•card
+214 : Enter•the•next•number
+215 : Checking•card•0•for•57
+216 : Number•57•not•on•this•card
+217 : Checking•card•1•for•57
+218 : Number•57•not•on•this•card
+219 : Checking•card•2•for•57
+220 : Marked•off•57
+221 : And•the•winner•is•card•2
+222 : •0:•Exit
+223 : •1:•Play•bingo
+224 : •2:•Set•number•separator
+225 : •3:•Create•a•bingo•card
+226 : •4:•List•existing•cards
+227 : •5:•Set•bingo•card•size
+228 : 
+229 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 12.00%</p></td></tr></table><hr><h4>Test 107</h4><p>Input data:<pre>3
+45 46 47 48 49 50 68 67 66 65 64 63 62 61 60 5
+1
+2
+3
+7
+9
+45
+6
+46
+47
+48
+49
+50
+5
+68
+67
+66
+65
+64
+63
+62
+61
+70
+60
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 45,•46,•47,•48,•49,•50,•68,•67,•66,•65,•64,•63,•62,•61,•60,•5
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Eyes•down,•look•in!
+019 : Enter•the•next•number
+020 : Checking•card•0•for•2
+021 : Number•2•not•on•this•card
+022 : Enter•the•next•number
+023 : Checking•card•0•for•3
+024 : Number•3•not•on•this•card
+025 : Enter•the•next•number
+026 : Checking•card•0•for•7
+027 : Number•7•not•on•this•card
+028 : Enter•the•next•number
+029 : Checking•card•0•for•9
+030 : Number•9•not•on•this•card
+031 : Enter•the•next•number
+032 : Checking•card•0•for•45
+033 : Marked•off•45
+034 : Enter•the•next•number
+035 : Checking•card•0•for•6
+036 : Number•6•not•on•this•card
+037 : Enter•the•next•number
+038 : Checking•card•0•for•46
+039 : Marked•off•46
+040 : Enter•the•next•number
+041 : Checking•card•0•for•47
+042 : Marked•off•47
+043 : Enter•the•next•number
+044 : Checking•card•0•for•48
+045 : Marked•off•48
+046 : Enter•the•next•number
+047 : Checking•card•0•for•49
+048 : Marked•off•49
+049 : Enter•the•next•number
+050 : Checking•card•0•for•50
+051 : Marked•off•50
+052 : Enter•the•next•number
+053 : Checking•card•0•for•5
+054 : Marked•off•5
+055 : Enter•the•next•number
+056 : Checking•card•0•for•68
+057 : Marked•off•68
+058 : Enter•the•next•number
+059 : Checking•card•0•for•67
+060 : Marked•off•67
+061 : Enter•the•next•number
+062 : Checking•card•0•for•66
+063 : Marked•off•66
+064 : Enter•the•next•number
+065 : Checking•card•0•for•65
+066 : Marked•off•65
+067 : Enter•the•next•number
+068 : Checking•card•0•for•64
+069 : Marked•off•64
+070 : Enter•the•next•number
+071 : Checking•card•0•for•63
+072 : Marked•off•63
+073 : Enter•the•next•number
+074 : Checking•card•0•for•62
+075 : Marked•off•62
+076 : Enter•the•next•number
+077 : Checking•card•0•for•61
+078 : Marked•off•61
+079 : Enter•the•next•number
+080 : Checking•card•0•for•70
+081 : Number•70•not•on•this•card
+082 : Enter•the•next•number
+083 : Checking•card•0•for•60
+084 : Marked•off•60
+085 : And•the•winner•is•card•0
+086 : •0:•Exit
+087 : •1:•Play•bingo
+088 : •2:•Set•number•separator
+089 : •3:•Create•a•bingo•card
+090 : •4:•List•existing•cards
+091 : •5:•Set•bingo•card•size
+092 : 
+093 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 45,•46,•47,•48,•49,•50,•68,•67,•66,•65,•64,•63,•62,•61,•60,•5
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Eyes•down,•look•in!
+019 : Enter•the•next•number
+020 : Checking•card•0•for•2
+021 : Number•2•not•on•this•card
+022 : Enter•the•next•number
+023 : Checking•card•0•for•3
+024 : Number•3•not•on•this•card
+025 : Enter•the•next•number
+026 : Checking•card•0•for•7
+027 : Number•7•not•on•this•card
+028 : Enter•the•next•number
+029 : Checking•card•0•for•9
+030 : Number•9•not•on•this•card
+031 : Enter•the•next•number
+032 : Checking•card•0•for•45
+033 : Marked•off•45
+034 : Enter•the•next•number
+035 : Checking•card•0•for•6
+036 : Number•6•not•on•this•card
+037 : Enter•the•next•number
+038 : Checking•card•0•for•46
+039 : Marked•off•46
+040 : Enter•the•next•number
+041 : Checking•card•0•for•47
+042 : Marked•off•47
+043 : Enter•the•next•number
+044 : Checking•card•0•for•48
+045 : Marked•off•48
+046 : Enter•the•next•number
+047 : Checking•card•0•for•49
+048 : Marked•off•49
+049 : Enter•the•next•number
+050 : Checking•card•0•for•50
+051 : Marked•off•50
+052 : Enter•the•next•number
+053 : Checking•card•0•for•5
+054 : Marked•off•5
+055 : Enter•the•next•number
+056 : Checking•card•0•for•68
+057 : Marked•off•68
+058 : Enter•the•next•number
+059 : Checking•card•0•for•67
+060 : Marked•off•67
+061 : Enter•the•next•number
+062 : Checking•card•0•for•66
+063 : Marked•off•66
+064 : Enter•the•next•number
+065 : Checking•card•0•for•65
+066 : Marked•off•65
+067 : Enter•the•next•number
+068 : Checking•card•0•for•64
+069 : Marked•off•64
+070 : Enter•the•next•number
+071 : Checking•card•0•for•63
+072 : Marked•off•63
+073 : Enter•the•next•number
+074 : Checking•card•0•for•62
+075 : Marked•off•62
+076 : Enter•the•next•number
+077 : Checking•card•0•for•61
+078 : Marked•off•61
+079 : Enter•the•next•number
+080 : Checking•card•0•for•70
+081 : Number•70•not•on•this•card
+082 : Enter•the•next•number
+083 : Checking•card•0•for•60
+084 : Marked•off•60
+085 : And•the•winner•is•card•0
+086 : •0:•Exit
+087 : •1:•Play•bingo
+088 : •2:•Set•number•separator
+089 : •3:•Create•a•bingo•card
+090 : •4:•List•existing•cards
+091 : •5:•Set•bingo•card•size
+092 : 
+093 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 4.00%</p></td></tr></table><hr><h4>Test 109</h4><p>Input data:<pre>5
+2
+3
+3
+56 89 34 23 26 27
+3
+2 4 6 8 10 12
+3
+70 71 72 73 74 75
+1
+89
+2
+75
+4
+72
+6
+27
+8
+10
+23
+12
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•2•rows•X•3•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•6•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 56,•89,•34,•23,•26,•27
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Enter•6•numbers•for•your•card•(separated•by•'•')
+029 : You•entered
+030 : 2,•4,•6,•8,•10,•12
+031 : •0:•Exit
+032 : •1:•Play•bingo
+033 : •2:•Set•number•separator
+034 : •3:•Create•a•bingo•card
+035 : •4:•List•existing•cards
+036 : •5:•Set•bingo•card•size
+037 : 
+038 : Enter•6•numbers•for•your•card•(separated•by•'•')
+039 : You•entered
+040 : 70,•71,•72,•73,•74,•75
+041 : •0:•Exit
+042 : •1:•Play•bingo
+043 : •2:•Set•number•separator
+044 : •3:•Create•a•bingo•card
+045 : •4:•List•existing•cards
+046 : •5:•Set•bingo•card•size
+047 : 
+048 : Eyes•down,•look•in!
+049 : Enter•the•next•number
+050 : Checking•card•0•for•89
+051 : Marked•off•89
+052 : Checking•card•1•for•89
+053 : Number•89•not•on•this•card
+054 : Checking•card•2•for•89
+055 : Number•89•not•on•this•card
+056 : Enter•the•next•number
+057 : Checking•card•0•for•2
+058 : Number•2•not•on•this•card
+059 : Checking•card•1•for•2
+060 : Marked•off•2
+061 : Checking•card•2•for•2
+062 : Number•2•not•on•this•card
+063 : Enter•the•next•number
+064 : Checking•card•0•for•75
+065 : Number•75•not•on•this•card
+066 : Checking•card•1•for•75
+067 : Number•75•not•on•this•card
+068 : Checking•card•2•for•75
+069 : Marked•off•75
+070 : Enter•the•next•number
+071 : Checking•card•0•for•4
+072 : Number•4•not•on•this•card
+073 : Checking•card•1•for•4
+074 : Marked•off•4
+075 : Checking•card•2•for•4
+076 : Number•4•not•on•this•card
+077 : Enter•the•next•number
+078 : Checking•card•0•for•72
+079 : Number•72•not•on•this•card
+080 : Checking•card•1•for•72
+081 : Number•72•not•on•this•card
+082 : Checking•card•2•for•72
+083 : Marked•off•72
+084 : Enter•the•next•number
+085 : Checking•card•0•for•6
+086 : Number•6•not•on•this•card
+087 : Checking•card•1•for•6
+088 : Marked•off•6
+089 : Checking•card•2•for•6
+090 : Number•6•not•on•this•card
+091 : Enter•the•next•number
+092 : Checking•card•0•for•27
+093 : Marked•off•27
+094 : Checking•card•1•for•27
+095 : Number•27•not•on•this•card
+096 : Checking•card•2•for•27
+097 : Number•27•not•on•this•card
+098 : Enter•the•next•number
+099 : Checking•card•0•for•8
+100 : Number•8•not•on•this•card
+101 : Checking•card•1•for•8
+102 : Marked•off•8
+103 : Checking•card•2•for•8
+104 : Number•8•not•on•this•card
+105 : Enter•the•next•number
+106 : Checking•card•0•for•10
+107 : Number•10•not•on•this•card
+108 : Checking•card•1•for•10
+109 : Marked•off•10
+110 : Checking•card•2•for•10
+111 : Number•10•not•on•this•card
+112 : Enter•the•next•number
+113 : Checking•card•0•for•23
+114 : Marked•off•23
+115 : Checking•card•1•for•23
+116 : Number•23•not•on•this•card
+117 : Checking•card•2•for•23
+118 : Number•23•not•on•this•card
+119 : Enter•the•next•number
+120 : Checking•card•0•for•12
+121 : Number•12•not•on•this•card
+122 : Checking•card•1•for•12
+123 : Marked•off•12
+124 : Checking•card•2•for•12
+125 : Number•12•not•on•this•card
+126 : And•the•winner•is•card•1
+127 : •0:•Exit
+128 : •1:•Play•bingo
+129 : •2:•Set•number•separator
+130 : •3:•Create•a•bingo•card
+131 : •4:•List•existing•cards
+132 : •5:•Set•bingo•card•size
+133 : 
+134 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•2•rows•X•3•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•6•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 56,•89,•34,•23,•26,•27
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Enter•6•numbers•for•your•card•(separated•by•'•')
+029 : You•entered
+030 : 2,•4,•6,•8,•10,•12
+031 : •0:•Exit
+032 : •1:•Play•bingo
+033 : •2:•Set•number•separator
+034 : •3:•Create•a•bingo•card
+035 : •4:•List•existing•cards
+036 : •5:•Set•bingo•card•size
+037 : 
+038 : Enter•6•numbers•for•your•card•(separated•by•'•')
+039 : You•entered
+040 : 70,•71,•72,•73,•74,•75
+041 : •0:•Exit
+042 : •1:•Play•bingo
+043 : •2:•Set•number•separator
+044 : •3:•Create•a•bingo•card
+045 : •4:•List•existing•cards
+046 : •5:•Set•bingo•card•size
+047 : 
+048 : Eyes•down,•look•in!
+049 : Enter•the•next•number
+050 : Checking•card•0•for•89
+051 : Marked•off•89
+052 : Checking•card•1•for•89
+053 : Number•89•not•on•this•card
+054 : Checking•card•2•for•89
+055 : Number•89•not•on•this•card
+056 : Enter•the•next•number
+057 : Checking•card•0•for•2
+058 : Number•2•not•on•this•card
+059 : Checking•card•1•for•2
+060 : Marked•off•2
+061 : Checking•card•2•for•2
+062 : Number•2•not•on•this•card
+063 : Enter•the•next•number
+064 : Checking•card•0•for•75
+065 : Number•75•not•on•this•card
+066 : Checking•card•1•for•75
+067 : Number•75•not•on•this•card
+068 : Checking•card•2•for•75
+069 : Marked•off•75
+070 : Enter•the•next•number
+071 : Checking•card•0•for•4
+072 : Number•4•not•on•this•card
+073 : Checking•card•1•for•4
+074 : Marked•off•4
+075 : Checking•card•2•for•4
+076 : Number•4•not•on•this•card
+077 : Enter•the•next•number
+078 : Checking•card•0•for•72
+079 : Number•72•not•on•this•card
+080 : Checking•card•1•for•72
+081 : Number•72•not•on•this•card
+082 : Checking•card•2•for•72
+083 : Marked•off•72
+084 : Enter•the•next•number
+085 : Checking•card•0•for•6
+086 : Number•6•not•on•this•card
+087 : Checking•card•1•for•6
+088 : Marked•off•6
+089 : Checking•card•2•for•6
+090 : Number•6•not•on•this•card
+091 : Enter•the•next•number
+092 : Checking•card•0•for•27
+093 : Marked•off•27
+094 : Checking•card•1•for•27
+095 : Number•27•not•on•this•card
+096 : Checking•card•2•for•27
+097 : Number•27•not•on•this•card
+098 : Enter•the•next•number
+099 : Checking•card•0•for•8
+100 : Number•8•not•on•this•card
+101 : Checking•card•1•for•8
+102 : Marked•off•8
+103 : Checking•card•2•for•8
+104 : Number•8•not•on•this•card
+105 : Enter•the•next•number
+106 : Checking•card•0•for•10
+107 : Number•10•not•on•this•card
+108 : Checking•card•1•for•10
+109 : Marked•off•10
+110 : Checking•card•2•for•10
+111 : Number•10•not•on•this•card
+112 : Enter•the•next•number
+113 : Checking•card•0•for•23
+114 : Marked•off•23
+115 : Checking•card•1•for•23
+116 : Number•23•not•on•this•card
+117 : Checking•card•2•for•23
+118 : Number•23•not•on•this•card
+119 : Enter•the•next•number
+120 : Checking•card•0•for•12
+121 : Number•12•not•on•this•card
+122 : Checking•card•1•for•12
+123 : Marked•off•12
+124 : Checking•card•2•for•12
+125 : Number•12•not•on•this•card
+126 : And•the•winner•is•card•1
+127 : •0:•Exit
+128 : •1:•Play•bingo
+129 : •2:•Set•number•separator
+130 : •3:•Create•a•bingo•card
+131 : •4:•List•existing•cards
+132 : •5:•Set•bingo•card•size
+133 : 
+134 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 2.00%</p></td></tr></table><hr><h4>Test 111</h4><p>Input data:<pre>3
+1 2 3 4 5 9 8 7 6 16 15 14 13 12 11 10
+3
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32
+1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+1
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+1
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+5
+22
+24
+26
+28
+30
+32
+1
+32
+30
+28
+26
+24
+22
+20
+18
+16
+14
+12
+10
+2
+4
+6
+8
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 1,•2,•3,•4,•5,•9,•8,•7,•6,•16,•15,•14,•13,•12,•11,•10
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•16•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 2,•4,•6,•8,•10,•12,•14,•16,•18,•20,•22,•24,•26,•28,•30,•32
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Eyes•down,•look•in!
+029 : Enter•the•next•number
+030 : Checking•card•0•for•1
+031 : Marked•off•1
+032 : Checking•card•1•for•1
+033 : Number•1•not•on•this•card
+034 : Enter•the•next•number
+035 : Checking•card•0•for•2
+036 : Marked•off•2
+037 : Checking•card•1•for•2
+038 : Marked•off•2
+039 : Enter•the•next•number
+040 : Checking•card•0•for•3
+041 : Marked•off•3
+042 : Checking•card•1•for•3
+043 : Number•3•not•on•this•card
+044 : Enter•the•next•number
+045 : Checking•card•0•for•4
+046 : Marked•off•4
+047 : Checking•card•1•for•4
+048 : Marked•off•4
+049 : Enter•the•next•number
+050 : Checking•card•0•for•5
+051 : Marked•off•5
+052 : Checking•card•1•for•5
+053 : Number•5•not•on•this•card
+054 : Enter•the•next•number
+055 : Checking•card•0•for•6
+056 : Marked•off•6
+057 : Checking•card•1•for•6
+058 : Marked•off•6
+059 : Enter•the•next•number
+060 : Checking•card•0•for•7
+061 : Marked•off•7
+062 : Checking•card•1•for•7
+063 : Number•7•not•on•this•card
+064 : Enter•the•next•number
+065 : Checking•card•0•for•8
+066 : Marked•off•8
+067 : Checking•card•1•for•8
+068 : Marked•off•8
+069 : Enter•the•next•number
+070 : Checking•card•0•for•9
+071 : Marked•off•9
+072 : Checking•card•1•for•9
+073 : Number•9•not•on•this•card
+074 : Enter•the•next•number
+075 : Checking•card•0•for•10
+076 : Marked•off•10
+077 : Checking•card•1•for•10
+078 : Marked•off•10
+079 : Enter•the•next•number
+080 : Checking•card•0•for•11
+081 : Marked•off•11
+082 : Checking•card•1•for•11
+083 : Number•11•not•on•this•card
+084 : Enter•the•next•number
+085 : Checking•card•0•for•12
+086 : Marked•off•12
+087 : Checking•card•1•for•12
+088 : Marked•off•12
+089 : Enter•the•next•number
+090 : Checking•card•0•for•13
+091 : Marked•off•13
+092 : Checking•card•1•for•13
+093 : Number•13•not•on•this•card
+094 : Enter•the•next•number
+095 : Checking•card•0•for•14
+096 : Marked•off•14
+097 : Checking•card•1•for•14
+098 : Marked•off•14
+099 : Enter•the•next•number
+100 : Checking•card•0•for•15
+101 : Marked•off•15
+102 : Checking•card•1•for•15
+103 : Number•15•not•on•this•card
+104 : Enter•the•next•number
+105 : Checking•card•0•for•16
+106 : Marked•off•16
+107 : Checking•card•1•for•16
+108 : Marked•off•16
+109 : And•the•winner•is•card•0
+110 : •0:•Exit
+111 : •1:•Play•bingo
+112 : •2:•Set•number•separator
+113 : •3:•Create•a•bingo•card
+114 : •4:•List•existing•cards
+115 : •5:•Set•bingo•card•size
+116 : 
+117 : Eyes•down,•look•in!
+118 : Enter•the•next•number
+119 : Checking•card•0•for•16
+120 : Marked•off•16
+121 : Checking•card•1•for•16
+122 : Marked•off•16
+123 : Enter•the•next•number
+124 : Checking•card•0•for•15
+125 : Marked•off•15
+126 : Checking•card•1•for•15
+127 : Number•15•not•on•this•card
+128 : Enter•the•next•number
+129 : Checking•card•0•for•14
+130 : Marked•off•14
+131 : Checking•card•1•for•14
+132 : Marked•off•14
+133 : Enter•the•next•number
+134 : Checking•card•0•for•13
+135 : Marked•off•13
+136 : Checking•card•1•for•13
+137 : Number•13•not•on•this•card
+138 : Enter•the•next•number
+139 : Checking•card•0•for•12
+140 : Marked•off•12
+141 : Checking•card•1•for•12
+142 : Marked•off•12
+143 : Enter•the•next•number
+144 : Checking•card•0•for•11
+145 : Marked•off•11
+146 : Checking•card•1•for•11
+147 : Number•11•not•on•this•card
+148 : Enter•the•next•number
+149 : Checking•card•0•for•10
+150 : Marked•off•10
+151 : Checking•card•1•for•10
+152 : Marked•off•10
+153 : Enter•the•next•number
+154 : Checking•card•0•for•9
+155 : Marked•off•9
+156 : Checking•card•1•for•9
+157 : Number•9•not•on•this•card
+158 : Enter•the•next•number
+159 : Checking•card•0•for•8
+160 : Marked•off•8
+161 : Checking•card•1•for•8
+162 : Marked•off•8
+163 : Enter•the•next•number
+164 : Checking•card•0•for•7
+165 : Marked•off•7
+166 : Checking•card•1•for•7
+167 : Number•7•not•on•this•card
+168 : Enter•the•next•number
+169 : Checking•card•0•for•6
+170 : Marked•off•6
+171 : Checking•card•1•for•6
+172 : Marked•off•6
+173 : Enter•the•next•number
+174 : Checking•card•0•for•5
+175 : Marked•off•5
+176 : Checking•card•1•for•5
+177 : Number•5•not•on•this•card
+178 : Enter•the•next•number
+179 : Checking•card•0•for•4
+180 : Marked•off•4
+181 : Checking•card•1•for•4
+182 : Marked•off•4
+183 : Enter•the•next•number
+184 : Checking•card•0•for•3
+185 : Marked•off•3
+186 : Checking•card•1•for•3
+187 : Number•3•not•on•this•card
+188 : Enter•the•next•number
+189 : Checking•card•0•for•2
+190 : Marked•off•2
+191 : Checking•card•1•for•2
+192 : Marked•off•2
+193 : Enter•the•next•number
+194 : Checking•card•0•for•1
+195 : Marked•off•1
+196 : Checking•card•1•for•1
+197 : Number•1•not•on•this•card
+198 : And•the•winner•is•card•0
+199 : •0:•Exit
+200 : •1:•Play•bingo
+201 : •2:•Set•number•separator
+202 : •3:•Create•a•bingo•card
+203 : •4:•List•existing•cards
+204 : •5:•Set•bingo•card•size
+205 : 
+206 : Eyes•down,•look•in!
+207 : Enter•the•next•number
+208 : Checking•card•0•for•2
+209 : Marked•off•2
+210 : Checking•card•1•for•2
+211 : Marked•off•2
+212 : Enter•the•next•number
+213 : Checking•card•0•for•4
+214 : Marked•off•4
+215 : Checking•card•1•for•4
+216 : Marked•off•4
+217 : Enter•the•next•number
+218 : Checking•card•0•for•6
+219 : Marked•off•6
+220 : Checking•card•1•for•6
+221 : Marked•off•6
+222 : Enter•the•next•number
+223 : Checking•card•0•for•8
+224 : Marked•off•8
+225 : Checking•card•1•for•8
+226 : Marked•off•8
+227 : Enter•the•next•number
+228 : Checking•card•0•for•10
+229 : Marked•off•10
+230 : Checking•card•1•for•10
+231 : Marked•off•10
+232 : Enter•the•next•number
+233 : Checking•card•0•for•12
+234 : Marked•off•12
+235 : Checking•card•1•for•12
+236 : Marked•off•12
+237 : Enter•the•next•number
+238 : Checking•card•0•for•14
+239 : Marked•off•14
+240 : Checking•card•1•for•14
+241 : Marked•off•14
+242 : Enter•the•next•number
+243 : Checking•card•0•for•16
+244 : Marked•off•16
+245 : Checking•card•1•for•16
+246 : Marked•off•16
+247 : Enter•the•next•number
+248 : Checking•card•0•for•18
+249 : Number•18•not•on•this•card
+250 : Checking•card•1•for•18
+251 : Marked•off•18
+252 : Enter•the•next•number
+253 : Checking•card•0•for•20
+254 : Number•20•not•on•this•card
+255 : Checking•card•1•for•20
+256 : Marked•off•20
+257 : Enter•the•next•number
+258 : Checking•card•0•for•5
+259 : Marked•off•5
+260 : Checking•card•1•for•5
+261 : Number•5•not•on•this•card
+262 : Enter•the•next•number
+263 : Checking•card•0•for•22
+264 : Number•22•not•on•this•card
+265 : Checking•card•1•for•22
+266 : Marked•off•22
+267 : Enter•the•next•number
+268 : Checking•card•0•for•24
+269 : Number•24•not•on•this•card
+270 : Checking•card•1•for•24
+271 : Marked•off•24
+272 : Enter•the•next•number
+273 : Checking•card•0•for•26
+274 : Number•26•not•on•this•card
+275 : Checking•card•1•for•26
+276 : Marked•off•26
+277 : Enter•the•next•number
+278 : Checking•card•0•for•28
+279 : Number•28•not•on•this•card
+280 : Checking•card•1•for•28
+281 : Marked•off•28
+282 : Enter•the•next•number
+283 : Checking•card•0•for•30
+284 : Number•30•not•on•this•card
+285 : Checking•card•1•for•30
+286 : Marked•off•30
+287 : Enter•the•next•number
+288 : Checking•card•0•for•32
+289 : Number•32•not•on•this•card
+290 : Checking•card•1•for•32
+291 : Marked•off•32
+292 : And•the•winner•is•card•1
+293 : •0:•Exit
+294 : •1:•Play•bingo
+295 : •2:•Set•number•separator
+296 : •3:•Create•a•bingo•card
+297 : •4:•List•existing•cards
+298 : •5:•Set•bingo•card•size
+299 : 
+300 : Eyes•down,•look•in!
+301 : Enter•the•next•number
+302 : Checking•card•0•for•32
+303 : Number•32•not•on•this•card
+304 : Checking•card•1•for•32
+305 : Marked•off•32
+306 : Enter•the•next•number
+307 : Checking•card•0•for•30
+308 : Number•30•not•on•this•card
+309 : Checking•card•1•for•30
+310 : Marked•off•30
+311 : Enter•the•next•number
+312 : Checking•card•0•for•28
+313 : Number•28•not•on•this•card
+314 : Checking•card•1•for•28
+315 : Marked•off•28
+316 : Enter•the•next•number
+317 : Checking•card•0•for•26
+318 : Number•26•not•on•this•card
+319 : Checking•card•1•for•26
+320 : Marked•off•26
+321 : Enter•the•next•number
+322 : Checking•card•0•for•24
+323 : Number•24•not•on•this•card
+324 : Checking•card•1•for•24
+325 : Marked•off•24
+326 : Enter•the•next•number
+327 : Checking•card•0•for•22
+328 : Number•22•not•on•this•card
+329 : Checking•card•1•for•22
+330 : Marked•off•22
+331 : Enter•the•next•number
+332 : Checking•card•0•for•20
+333 : Number•20•not•on•this•card
+334 : Checking•card•1•for•20
+335 : Marked•off•20
+336 : Enter•the•next•number
+337 : Checking•card•0•for•18
+338 : Number•18•not•on•this•card
+339 : Checking•card•1•for•18
+340 : Marked•off•18
+341 : Enter•the•next•number
+342 : Checking•card•0•for•16
+343 : Marked•off•16
+344 : Checking•card•1•for•16
+345 : Marked•off•16
+346 : Enter•the•next•number
+347 : Checking•card•0•for•14
+348 : Marked•off•14
+349 : Checking•card•1•for•14
+350 : Marked•off•14
+351 : Enter•the•next•number
+352 : Checking•card•0•for•12
+353 : Marked•off•12
+354 : Checking•card•1•for•12
+355 : Marked•off•12
+356 : Enter•the•next•number
+357 : Checking•card•0•for•10
+358 : Marked•off•10
+359 : Checking•card•1•for•10
+360 : Marked•off•10
+361 : Enter•the•next•number
+362 : Checking•card•0•for•2
+363 : Marked•off•2
+364 : Checking•card•1•for•2
+365 : Marked•off•2
+366 : Enter•the•next•number
+367 : Checking•card•0•for•4
+368 : Marked•off•4
+369 : Checking•card•1•for•4
+370 : Marked•off•4
+371 : Enter•the•next•number
+372 : Checking•card•0•for•6
+373 : Marked•off•6
+374 : Checking•card•1•for•6
+375 : Marked•off•6
+376 : Enter•the•next•number
+377 : Checking•card•0•for•8
+378 : Marked•off•8
+379 : Checking•card•1•for•8
+380 : Marked•off•8
+381 : And•the•winner•is•card•1
+382 : •0:•Exit
+383 : •1:•Play•bingo
+384 : •2:•Set•number•separator
+385 : •3:•Create•a•bingo•card
+386 : •4:•List•existing•cards
+387 : •5:•Set•bingo•card•size
+388 : 
+389 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 1,•2,•3,•4,•5,•9,•8,•7,•6,•16,•15,•14,•13,•12,•11,•10
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•16•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 2,•4,•6,•8,•10,•12,•14,•16,•18,•20,•22,•24,•26,•28,•30,•32
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Eyes•down,•look•in!
+029 : Enter•the•next•number
+030 : Checking•card•0•for•1
+031 : Marked•off•1
+032 : Checking•card•1•for•1
+033 : Number•1•not•on•this•card
+034 : Enter•the•next•number
+035 : Checking•card•0•for•2
+036 : Marked•off•2
+037 : Checking•card•1•for•2
+038 : Marked•off•2
+039 : Enter•the•next•number
+040 : Checking•card•0•for•3
+041 : Marked•off•3
+042 : Checking•card•1•for•3
+043 : Number•3•not•on•this•card
+044 : Enter•the•next•number
+045 : Checking•card•0•for•4
+046 : Marked•off•4
+047 : Checking•card•1•for•4
+048 : Marked•off•4
+049 : Enter•the•next•number
+050 : Checking•card•0•for•5
+051 : Marked•off•5
+052 : Checking•card•1•for•5
+053 : Number•5•not•on•this•card
+054 : Enter•the•next•number
+055 : Checking•card•0•for•6
+056 : Marked•off•6
+057 : Checking•card•1•for•6
+058 : Marked•off•6
+059 : Enter•the•next•number
+060 : Checking•card•0•for•7
+061 : Marked•off•7
+062 : Checking•card•1•for•7
+063 : Number•7•not•on•this•card
+064 : Enter•the•next•number
+065 : Checking•card•0•for•8
+066 : Marked•off•8
+067 : Checking•card•1•for•8
+068 : Marked•off•8
+069 : Enter•the•next•number
+070 : Checking•card•0•for•9
+071 : Marked•off•9
+072 : Checking•card•1•for•9
+073 : Number•9•not•on•this•card
+074 : Enter•the•next•number
+075 : Checking•card•0•for•10
+076 : Marked•off•10
+077 : Checking•card•1•for•10
+078 : Marked•off•10
+079 : Enter•the•next•number
+080 : Checking•card•0•for•11
+081 : Marked•off•11
+082 : Checking•card•1•for•11
+083 : Number•11•not•on•this•card
+084 : Enter•the•next•number
+085 : Checking•card•0•for•12
+086 : Marked•off•12
+087 : Checking•card•1•for•12
+088 : Marked•off•12
+089 : Enter•the•next•number
+090 : Checking•card•0•for•13
+091 : Marked•off•13
+092 : Checking•card•1•for•13
+093 : Number•13•not•on•this•card
+094 : Enter•the•next•number
+095 : Checking•card•0•for•14
+096 : Marked•off•14
+097 : Checking•card•1•for•14
+098 : Marked•off•14
+099 : Enter•the•next•number
+100 : Checking•card•0•for•15
+101 : Marked•off•15
+102 : Checking•card•1•for•15
+103 : Number•15•not•on•this•card
+104 : Enter•the•next•number
+105 : Checking•card•0•for•16
+106 : Marked•off•16
+107 : Checking•card•1•for•16
+108 : Marked•off•16
+109 : And•the•winner•is•card•0
+110 : •0:•Exit
+111 : •1:•Play•bingo
+112 : •2:•Set•number•separator
+113 : •3:•Create•a•bingo•card
+114 : •4:•List•existing•cards
+115 : •5:•Set•bingo•card•size
+116 : 
+117 : Eyes•down,•look•in!
+118 : Enter•the•next•number
+119 : Checking•card•0•for•16
+120 : Marked•off•16
+121 : Checking•card•1•for•16
+122 : Marked•off•16
+123 : Enter•the•next•number
+124 : Checking•card•0•for•15
+125 : Marked•off•15
+126 : Checking•card•1•for•15
+127 : Number•15•not•on•this•card
+128 : Enter•the•next•number
+129 : Checking•card•0•for•14
+130 : Marked•off•14
+131 : Checking•card•1•for•14
+132 : Marked•off•14
+133 : Enter•the•next•number
+134 : Checking•card•0•for•13
+135 : Marked•off•13
+136 : Checking•card•1•for•13
+137 : Number•13•not•on•this•card
+138 : Enter•the•next•number
+139 : Checking•card•0•for•12
+140 : Marked•off•12
+141 : Checking•card•1•for•12
+142 : Marked•off•12
+143 : Enter•the•next•number
+144 : Checking•card•0•for•11
+145 : Marked•off•11
+146 : Checking•card•1•for•11
+147 : Number•11•not•on•this•card
+148 : Enter•the•next•number
+149 : Checking•card•0•for•10
+150 : Marked•off•10
+151 : Checking•card•1•for•10
+152 : Marked•off•10
+153 : Enter•the•next•number
+154 : Checking•card•0•for•9
+155 : Marked•off•9
+156 : Checking•card•1•for•9
+157 : Number•9•not•on•this•card
+158 : Enter•the•next•number
+159 : Checking•card•0•for•8
+160 : Marked•off•8
+161 : Checking•card•1•for•8
+162 : Marked•off•8
+163 : Enter•the•next•number
+164 : Checking•card•0•for•7
+165 : Marked•off•7
+166 : Checking•card•1•for•7
+167 : Number•7•not•on•this•card
+168 : Enter•the•next•number
+169 : Checking•card•0•for•6
+170 : Marked•off•6
+171 : Checking•card•1•for•6
+172 : Marked•off•6
+173 : Enter•the•next•number
+174 : Checking•card•0•for•5
+175 : Marked•off•5
+176 : Checking•card•1•for•5
+177 : Number•5•not•on•this•card
+178 : Enter•the•next•number
+179 : Checking•card•0•for•4
+180 : Marked•off•4
+181 : Checking•card•1•for•4
+182 : Marked•off•4
+183 : Enter•the•next•number
+184 : Checking•card•0•for•3
+185 : Marked•off•3
+186 : Checking•card•1•for•3
+187 : Number•3•not•on•this•card
+188 : Enter•the•next•number
+189 : Checking•card•0•for•2
+190 : Marked•off•2
+191 : Checking•card•1•for•2
+192 : Marked•off•2
+193 : Enter•the•next•number
+194 : Checking•card•0•for•1
+195 : Marked•off•1
+196 : Checking•card•1•for•1
+197 : Number•1•not•on•this•card
+198 : And•the•winner•is•card•0
+199 : •0:•Exit
+200 : •1:•Play•bingo
+201 : •2:•Set•number•separator
+202 : •3:•Create•a•bingo•card
+203 : •4:•List•existing•cards
+204 : •5:•Set•bingo•card•size
+205 : 
+206 : Eyes•down,•look•in!
+207 : Enter•the•next•number
+208 : Checking•card•0•for•2
+209 : Marked•off•2
+210 : Checking•card•1•for•2
+211 : Marked•off•2
+212 : Enter•the•next•number
+213 : Checking•card•0•for•4
+214 : Marked•off•4
+215 : Checking•card•1•for•4
+216 : Marked•off•4
+217 : Enter•the•next•number
+218 : Checking•card•0•for•6
+219 : Marked•off•6
+220 : Checking•card•1•for•6
+221 : Marked•off•6
+222 : Enter•the•next•number
+223 : Checking•card•0•for•8
+224 : Marked•off•8
+225 : Checking•card•1•for•8
+226 : Marked•off•8
+227 : Enter•the•next•number
+228 : Checking•card•0•for•10
+229 : Marked•off•10
+230 : Checking•card•1•for•10
+231 : Marked•off•10
+232 : Enter•the•next•number
+233 : Checking•card•0•for•12
+234 : Marked•off•12
+235 : Checking•card•1•for•12
+236 : Marked•off•12
+237 : Enter•the•next•number
+238 : Checking•card•0•for•14
+239 : Marked•off•14
+240 : Checking•card•1•for•14
+241 : Marked•off•14
+242 : Enter•the•next•number
+243 : Checking•card•0•for•16
+244 : Marked•off•16
+245 : Checking•card•1•for•16
+246 : Marked•off•16
+247 : Enter•the•next•number
+248 : Checking•card•0•for•18
+249 : Number•18•not•on•this•card
+250 : Checking•card•1•for•18
+251 : Marked•off•18
+252 : Enter•the•next•number
+253 : Checking•card•0•for•20
+254 : Number•20•not•on•this•card
+255 : Checking•card•1•for•20
+256 : Marked•off•20
+257 : Enter•the•next•number
+258 : Checking•card•0•for•5
+259 : Marked•off•5
+260 : Checking•card•1•for•5
+261 : Number•5•not•on•this•card
+262 : Enter•the•next•number
+263 : Checking•card•0•for•22
+264 : Number•22•not•on•this•card
+265 : Checking•card•1•for•22
+266 : Marked•off•22
+267 : Enter•the•next•number
+268 : Checking•card•0•for•24
+269 : Number•24•not•on•this•card
+270 : Checking•card•1•for•24
+271 : Marked•off•24
+272 : Enter•the•next•number
+273 : Checking•card•0•for•26
+274 : Number•26•not•on•this•card
+275 : Checking•card•1•for•26
+276 : Marked•off•26
+277 : Enter•the•next•number
+278 : Checking•card•0•for•28
+279 : Number•28•not•on•this•card
+280 : Checking•card•1•for•28
+281 : Marked•off•28
+282 : Enter•the•next•number
+283 : Checking•card•0•for•30
+284 : Number•30•not•on•this•card
+285 : Checking•card•1•for•30
+286 : Marked•off•30
+287 : Enter•the•next•number
+288 : Checking•card•0•for•32
+289 : Number•32•not•on•this•card
+290 : Checking•card•1•for•32
+291 : Marked•off•32
+292 : And•the•winner•is•card•1
+293 : •0:•Exit
+294 : •1:•Play•bingo
+295 : •2:•Set•number•separator
+296 : •3:•Create•a•bingo•card
+297 : •4:•List•existing•cards
+298 : •5:•Set•bingo•card•size
+299 : 
+300 : Eyes•down,•look•in!
+301 : Enter•the•next•number
+302 : Checking•card•0•for•32
+303 : Number•32•not•on•this•card
+304 : Checking•card•1•for•32
+305 : Marked•off•32
+306 : Enter•the•next•number
+307 : Checking•card•0•for•30
+308 : Number•30•not•on•this•card
+309 : Checking•card•1•for•30
+310 : Marked•off•30
+311 : Enter•the•next•number
+312 : Checking•card•0•for•28
+313 : Number•28•not•on•this•card
+314 : Checking•card•1•for•28
+315 : Marked•off•28
+316 : Enter•the•next•number
+317 : Checking•card•0•for•26
+318 : Number•26•not•on•this•card
+319 : Checking•card•1•for•26
+320 : Marked•off•26
+321 : Enter•the•next•number
+322 : Checking•card•0•for•24
+323 : Number•24•not•on•this•card
+324 : Checking•card•1•for•24
+325 : Marked•off•24
+326 : Enter•the•next•number
+327 : Checking•card•0•for•22
+328 : Number•22•not•on•this•card
+329 : Checking•card•1•for•22
+330 : Marked•off•22
+331 : Enter•the•next•number
+332 : Checking•card•0•for•20
+333 : Number•20•not•on•this•card
+334 : Checking•card•1•for•20
+335 : Marked•off•20
+336 : Enter•the•next•number
+337 : Checking•card•0•for•18
+338 : Number•18•not•on•this•card
+339 : Checking•card•1•for•18
+340 : Marked•off•18
+341 : Enter•the•next•number
+342 : Checking•card•0•for•16
+343 : Marked•off•16
+344 : Checking•card•1•for•16
+345 : Marked•off•16
+346 : Enter•the•next•number
+347 : Checking•card•0•for•14
+348 : Marked•off•14
+349 : Checking•card•1•for•14
+350 : Marked•off•14
+351 : Enter•the•next•number
+352 : Checking•card•0•for•12
+353 : Marked•off•12
+354 : Checking•card•1•for•12
+355 : Marked•off•12
+356 : Enter•the•next•number
+357 : Checking•card•0•for•10
+358 : Marked•off•10
+359 : Checking•card•1•for•10
+360 : Marked•off•10
+361 : Enter•the•next•number
+362 : Checking•card•0•for•2
+363 : Marked•off•2
+364 : Checking•card•1•for•2
+365 : Marked•off•2
+366 : Enter•the•next•number
+367 : Checking•card•0•for•4
+368 : Marked•off•4
+369 : Checking•card•1•for•4
+370 : Marked•off•4
+371 : Enter•the•next•number
+372 : Checking•card•0•for•6
+373 : Marked•off•6
+374 : Checking•card•1•for•6
+375 : Marked•off•6
+376 : Enter•the•next•number
+377 : Checking•card•0•for•8
+378 : Marked•off•8
+379 : Checking•card•1•for•8
+380 : Marked•off•8
+381 : And•the•winner•is•card•1
+382 : •0:•Exit
+383 : •1:•Play•bingo
+384 : •2:•Set•number•separator
+385 : •3:•Create•a•bingo•card
+386 : •4:•List•existing•cards
+387 : •5:•Set•bingo•card•size
+388 : 
+389 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 6.00%</p></td></tr></table><hr></div><div class="tab-pane fade" id="v-pills-q4" role="tabpanel" aria-labelledby="v-pills-q4-tab"><h3>Question 4 - Marks: 48/48</h3><h4>Test 315</h4><p>Input data:<pre>5
+8
+5
+3
+41 46 47 48 49 50 23 24 25 12 14 15 45 6 4 5 68 7 8 9 52 53 54 55 17 18 19 73 74 75 90 91 92 93 94 95 96 97 98 99
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•8•rows•X•5•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•40•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 41,•46,•47,•48,•49,•50,•23,•24,•25,•12,•14,•15,•45,•6,•4,•5,•68,•7,•8,•9,•52,•53,•54,•55,•17,•18,•19,•73,•74,•75,•90,•91,•92,•93,•94,•95,•96,•97,•98,•99
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•8•rows•X•5•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•40•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 41,•46,•47,•48,•49,•50,•23,•24,•25,•12,•14,•15,•45,•6,•4,•5,•68,•7,•8,•9,•52,•53,•54,•55,•17,•18,•19,•73,•74,•75,•90,•91,•92,•93,•94,•95,•96,•97,•98,•99
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 5.00%</p></td></tr></table><hr><h4>Test 320</h4><p>Input data:<pre>2
+:
+3
+4:5:6:7:8:9:1:2:3:10:11:12:13:14:15:16
+4
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•new•separator
+009 : Separator•is•':'
+010 : •0:•Exit
+011 : •1:•Play•bingo
+012 : •2:•Set•number•separator
+013 : •3:•Create•a•bingo•card
+014 : •4:•List•existing•cards
+015 : •5:•Set•bingo•card•size
+016 : 
+017 : Enter•16•numbers•for•your•card•(separated•by•':')
+018 : You•entered
+019 : 4,•5,•6,•7,•8,•9,•1,•2,•3,•10,•11,•12,•13,•14,•15,•16
+020 : •0:•Exit
+021 : •1:•Play•bingo
+022 : •2:•Set•number•separator
+023 : •3:•Create•a•bingo•card
+024 : •4:•List•existing•cards
+025 : •5:•Set•bingo•card•size
+026 : 
+027 : Card••0•numbers:
+028 : •4:•5:•6:•7
+029 : •8:•9:•1:•2
+030 : •3:10:11:12
+031 : 13:14:15:16
+032 : •0:•Exit
+033 : •1:•Play•bingo
+034 : •2:•Set•number•separator
+035 : •3:•Create•a•bingo•card
+036 : •4:•List•existing•cards
+037 : •5:•Set•bingo•card•size
+038 : 
+039 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•new•separator
+009 : Separator•is•':'
+010 : •0:•Exit
+011 : •1:•Play•bingo
+012 : •2:•Set•number•separator
+013 : •3:•Create•a•bingo•card
+014 : •4:•List•existing•cards
+015 : •5:•Set•bingo•card•size
+016 : 
+017 : Enter•16•numbers•for•your•card•(separated•by•':')
+018 : You•entered
+019 : 4,•5,•6,•7,•8,•9,•1,•2,•3,•10,•11,•12,•13,•14,•15,•16
+020 : •0:•Exit
+021 : •1:•Play•bingo
+022 : •2:•Set•number•separator
+023 : •3:•Create•a•bingo•card
+024 : •4:•List•existing•cards
+025 : •5:•Set•bingo•card•size
+026 : 
+027 : Card••0•numbers:
+028 : •4:•5:•6:•7
+029 : •8:•9:•1:•2
+030 : •3:10:11:12
+031 : 13:14:15:16
+032 : •0:•Exit
+033 : •1:•Play•bingo
+034 : •2:•Set•number•separator
+035 : •3:•Create•a•bingo•card
+036 : •4:•List•existing•cards
+037 : •5:•Set•bingo•card•size
+038 : 
+039 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 11.00%</p></td></tr></table><hr><h4>Test 312</h4><p>Input data:<pre>3
+56 78 90 1 2 3 4 5 6 
+1 4 6 8 4
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 29 37
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : Try•again:•you•entered•9•numbers•instead•of•16
+010 : Enter•16•numbers•for•your•card•(separated•by•'•')
+011 : Try•again:•you•entered•5•numbers•instead•of•16
+012 : Enter•16•numbers•for•your•card•(separated•by•'•')
+013 : You•entered
+014 : 2,•4,•6,•8,•10,•12,•14,•16,•18,•20,•22,•24,•26,•28,•29,•37
+015 : •0:•Exit
+016 : •1:•Play•bingo
+017 : •2:•Set•number•separator
+018 : •3:•Create•a•bingo•card
+019 : •4:•List•existing•cards
+020 : •5:•Set•bingo•card•size
+021 : 
+022 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : Try•again:•you•entered•9•numbers•instead•of•16
+010 : Enter•16•numbers•for•your•card•(separated•by•'•')
+011 : Try•again:•you•entered•5•numbers•instead•of•16
+012 : Enter•16•numbers•for•your•card•(separated•by•'•')
+013 : You•entered
+014 : 2,•4,•6,•8,•10,•12,•14,•16,•18,•20,•22,•24,•26,•28,•29,•37
+015 : •0:•Exit
+016 : •1:•Play•bingo
+017 : •2:•Set•number•separator
+018 : •3:•Create•a•bingo•card
+019 : •4:•List•existing•cards
+020 : •5:•Set•bingo•card•size
+021 : 
+022 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 4.00%</p></td></tr></table><hr><h4>Test 314</h4><p>Input data:<pre>3
+4 5 6 7 8 9 12 13 14 15 17 18 19 23 24 25
+3
+45 46 47 48 49 50 23 24 25 12 14 15 45 6
+3
+6 8 9 2 24 3 56 4 78 6 67 68 70 72 73 74
+4
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 4,•5,•6,•7,•8,•9,•12,•13,•14,•15,•17,•18,•19,•23,•24,•25
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•16•numbers•for•your•card•(separated•by•'•')
+019 : Try•again:•you•entered•14•numbers•instead•of•16
+020 : Enter•16•numbers•for•your•card•(separated•by•'•')
+021 : Try•again:•you•entered•1•numbers•instead•of•16
+022 : Enter•16•numbers•for•your•card•(separated•by•'•')
+023 : You•entered
+024 : 6,•8,•9,•2,•24,•3,•56,•4,•78,•6,•67,•68,•70,•72,•73,•74
+025 : •0:•Exit
+026 : •1:•Play•bingo
+027 : •2:•Set•number•separator
+028 : •3:•Create•a•bingo•card
+029 : •4:•List•existing•cards
+030 : •5:•Set•bingo•card•size
+031 : 
+032 : Card••0•numbers:
+033 : •4••5••6••7
+034 : •8••9•12•13
+035 : 14•15•17•18
+036 : 19•23•24•25
+037 : Card••1•numbers:
+038 : •6••8••9••2
+039 : 24••3•56••4
+040 : 78••6•67•68
+041 : 70•72•73•74
+042 : •0:•Exit
+043 : •1:•Play•bingo
+044 : •2:•Set•number•separator
+045 : •3:•Create•a•bingo•card
+046 : •4:•List•existing•cards
+047 : •5:•Set•bingo•card•size
+048 : 
+049 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 4,•5,•6,•7,•8,•9,•12,•13,•14,•15,•17,•18,•19,•23,•24,•25
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•16•numbers•for•your•card•(separated•by•'•')
+019 : Try•again:•you•entered•14•numbers•instead•of•16
+020 : Enter•16•numbers•for•your•card•(separated•by•'•')
+021 : Try•again:•you•entered•1•numbers•instead•of•16
+022 : Enter•16•numbers•for•your•card•(separated•by•'•')
+023 : You•entered
+024 : 6,•8,•9,•2,•24,•3,•56,•4,•78,•6,•67,•68,•70,•72,•73,•74
+025 : •0:•Exit
+026 : •1:•Play•bingo
+027 : •2:•Set•number•separator
+028 : •3:•Create•a•bingo•card
+029 : •4:•List•existing•cards
+030 : •5:•Set•bingo•card•size
+031 : 
+032 : Card••0•numbers:
+033 : •4••5••6••7
+034 : •8••9•12•13
+035 : 14•15•17•18
+036 : 19•23•24•25
+037 : Card••1•numbers:
+038 : •6••8••9••2
+039 : 24••3•56••4
+040 : 78••6•67•68
+041 : 70•72•73•74
+042 : •0:•Exit
+043 : •1:•Play•bingo
+044 : •2:•Set•number•separator
+045 : •3:•Create•a•bingo•card
+046 : •4:•List•existing•cards
+047 : •5:•Set•bingo•card•size
+048 : 
+049 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 7.00%</p></td></tr></table><hr><h4>Test 319</h4><p>Input data:<pre>5
+2
+3
+3
+1 2 3 4 5 6
+3
+2 3 4 5 6 7
+3
+3 4 5 6 7 8
+3
+4 5 6 7 8 9
+3
+5 6 7 8 9 1
+3
+6 7 8 9 1 2
+3
+7 8 9 1 2 3
+3
+8 9 1 2 3 4
+3
+9 1 2 3 4 5
+3
+6 5 4 3 2 1
+3
+7 6 5 4 3 2 
+3
+8 7 6 5 4 3
+3
+9 8 7 6 5 4
+4
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•2•rows•X•3•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•6•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 1,•2,•3,•4,•5,•6
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Enter•6•numbers•for•your•card•(separated•by•'•')
+029 : You•entered
+030 : 2,•3,•4,•5,•6,•7
+031 : •0:•Exit
+032 : •1:•Play•bingo
+033 : •2:•Set•number•separator
+034 : •3:•Create•a•bingo•card
+035 : •4:•List•existing•cards
+036 : •5:•Set•bingo•card•size
+037 : 
+038 : Enter•6•numbers•for•your•card•(separated•by•'•')
+039 : You•entered
+040 : 3,•4,•5,•6,•7,•8
+041 : •0:•Exit
+042 : •1:•Play•bingo
+043 : •2:•Set•number•separator
+044 : •3:•Create•a•bingo•card
+045 : •4:•List•existing•cards
+046 : •5:•Set•bingo•card•size
+047 : 
+048 : Enter•6•numbers•for•your•card•(separated•by•'•')
+049 : You•entered
+050 : 4,•5,•6,•7,•8,•9
+051 : •0:•Exit
+052 : •1:•Play•bingo
+053 : •2:•Set•number•separator
+054 : •3:•Create•a•bingo•card
+055 : •4:•List•existing•cards
+056 : •5:•Set•bingo•card•size
+057 : 
+058 : Enter•6•numbers•for•your•card•(separated•by•'•')
+059 : You•entered
+060 : 5,•6,•7,•8,•9,•1
+061 : •0:•Exit
+062 : •1:•Play•bingo
+063 : •2:•Set•number•separator
+064 : •3:•Create•a•bingo•card
+065 : •4:•List•existing•cards
+066 : •5:•Set•bingo•card•size
+067 : 
+068 : Enter•6•numbers•for•your•card•(separated•by•'•')
+069 : You•entered
+070 : 6,•7,•8,•9,•1,•2
+071 : •0:•Exit
+072 : •1:•Play•bingo
+073 : •2:•Set•number•separator
+074 : •3:•Create•a•bingo•card
+075 : •4:•List•existing•cards
+076 : •5:•Set•bingo•card•size
+077 : 
+078 : Enter•6•numbers•for•your•card•(separated•by•'•')
+079 : You•entered
+080 : 7,•8,•9,•1,•2,•3
+081 : •0:•Exit
+082 : •1:•Play•bingo
+083 : •2:•Set•number•separator
+084 : •3:•Create•a•bingo•card
+085 : •4:•List•existing•cards
+086 : •5:•Set•bingo•card•size
+087 : 
+088 : Enter•6•numbers•for•your•card•(separated•by•'•')
+089 : You•entered
+090 : 8,•9,•1,•2,•3,•4
+091 : •0:•Exit
+092 : •1:•Play•bingo
+093 : •2:•Set•number•separator
+094 : •3:•Create•a•bingo•card
+095 : •4:•List•existing•cards
+096 : •5:•Set•bingo•card•size
+097 : 
+098 : Enter•6•numbers•for•your•card•(separated•by•'•')
+099 : You•entered
+100 : 9,•1,•2,•3,•4,•5
+101 : •0:•Exit
+102 : •1:•Play•bingo
+103 : •2:•Set•number•separator
+104 : •3:•Create•a•bingo•card
+105 : •4:•List•existing•cards
+106 : •5:•Set•bingo•card•size
+107 : 
+108 : Enter•6•numbers•for•your•card•(separated•by•'•')
+109 : You•entered
+110 : 6,•5,•4,•3,•2,•1
+111 : •0:•Exit
+112 : •1:•Play•bingo
+113 : •2:•Set•number•separator
+114 : •3:•Create•a•bingo•card
+115 : •4:•List•existing•cards
+116 : •5:•Set•bingo•card•size
+117 : 
+118 : Enter•6•numbers•for•your•card•(separated•by•'•')
+119 : You•entered
+120 : 7,•6,•5,•4,•3,•2
+121 : •0:•Exit
+122 : •1:•Play•bingo
+123 : •2:•Set•number•separator
+124 : •3:•Create•a•bingo•card
+125 : •4:•List•existing•cards
+126 : •5:•Set•bingo•card•size
+127 : 
+128 : Enter•6•numbers•for•your•card•(separated•by•'•')
+129 : You•entered
+130 : 8,•7,•6,•5,•4,•3
+131 : •0:•Exit
+132 : •1:•Play•bingo
+133 : •2:•Set•number•separator
+134 : •3:•Create•a•bingo•card
+135 : •4:•List•existing•cards
+136 : •5:•Set•bingo•card•size
+137 : 
+138 : Enter•6•numbers•for•your•card•(separated•by•'•')
+139 : You•entered
+140 : 9,•8,•7,•6,•5,•4
+141 : •0:•Exit
+142 : •1:•Play•bingo
+143 : •2:•Set•number•separator
+144 : •3:•Create•a•bingo•card
+145 : •4:•List•existing•cards
+146 : •5:•Set•bingo•card•size
+147 : 
+148 : Card••0•numbers:
+149 : •1••2••3
+150 : •4••5••6
+151 : Card••1•numbers:
+152 : •2••3••4
+153 : •5••6••7
+154 : Card••2•numbers:
+155 : •3••4••5
+156 : •6••7••8
+157 : Card••3•numbers:
+158 : •4••5••6
+159 : •7••8••9
+160 : Card••4•numbers:
+161 : •5••6••7
+162 : •8••9••1
+163 : Card••5•numbers:
+164 : •6••7••8
+165 : •9••1••2
+166 : Card••6•numbers:
+167 : •7••8••9
+168 : •1••2••3
+169 : Card••7•numbers:
+170 : •8••9••1
+171 : •2••3••4
+172 : Card••8•numbers:
+173 : •9••1••2
+174 : •3••4••5
+175 : Card••9•numbers:
+176 : •6••5••4
+177 : •3••2••1
+178 : Card•10•numbers:
+179 : •7••6••5
+180 : •4••3••2
+181 : Card•11•numbers:
+182 : •8••7••6
+183 : •5••4••3
+184 : Card•12•numbers:
+185 : •9••8••7
+186 : •6••5••4
+187 : •0:•Exit
+188 : •1:•Play•bingo
+189 : •2:•Set•number•separator
+190 : •3:•Create•a•bingo•card
+191 : •4:•List•existing•cards
+192 : •5:•Set•bingo•card•size
+193 : 
+194 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•2•rows•X•3•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•6•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 1,•2,•3,•4,•5,•6
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Enter•6•numbers•for•your•card•(separated•by•'•')
+029 : You•entered
+030 : 2,•3,•4,•5,•6,•7
+031 : •0:•Exit
+032 : •1:•Play•bingo
+033 : •2:•Set•number•separator
+034 : •3:•Create•a•bingo•card
+035 : •4:•List•existing•cards
+036 : •5:•Set•bingo•card•size
+037 : 
+038 : Enter•6•numbers•for•your•card•(separated•by•'•')
+039 : You•entered
+040 : 3,•4,•5,•6,•7,•8
+041 : •0:•Exit
+042 : •1:•Play•bingo
+043 : •2:•Set•number•separator
+044 : •3:•Create•a•bingo•card
+045 : •4:•List•existing•cards
+046 : •5:•Set•bingo•card•size
+047 : 
+048 : Enter•6•numbers•for•your•card•(separated•by•'•')
+049 : You•entered
+050 : 4,•5,•6,•7,•8,•9
+051 : •0:•Exit
+052 : •1:•Play•bingo
+053 : •2:•Set•number•separator
+054 : •3:•Create•a•bingo•card
+055 : •4:•List•existing•cards
+056 : •5:•Set•bingo•card•size
+057 : 
+058 : Enter•6•numbers•for•your•card•(separated•by•'•')
+059 : You•entered
+060 : 5,•6,•7,•8,•9,•1
+061 : •0:•Exit
+062 : •1:•Play•bingo
+063 : •2:•Set•number•separator
+064 : •3:•Create•a•bingo•card
+065 : •4:•List•existing•cards
+066 : •5:•Set•bingo•card•size
+067 : 
+068 : Enter•6•numbers•for•your•card•(separated•by•'•')
+069 : You•entered
+070 : 6,•7,•8,•9,•1,•2
+071 : •0:•Exit
+072 : •1:•Play•bingo
+073 : •2:•Set•number•separator
+074 : •3:•Create•a•bingo•card
+075 : •4:•List•existing•cards
+076 : •5:•Set•bingo•card•size
+077 : 
+078 : Enter•6•numbers•for•your•card•(separated•by•'•')
+079 : You•entered
+080 : 7,•8,•9,•1,•2,•3
+081 : •0:•Exit
+082 : •1:•Play•bingo
+083 : •2:•Set•number•separator
+084 : •3:•Create•a•bingo•card
+085 : •4:•List•existing•cards
+086 : •5:•Set•bingo•card•size
+087 : 
+088 : Enter•6•numbers•for•your•card•(separated•by•'•')
+089 : You•entered
+090 : 8,•9,•1,•2,•3,•4
+091 : •0:•Exit
+092 : •1:•Play•bingo
+093 : •2:•Set•number•separator
+094 : •3:•Create•a•bingo•card
+095 : •4:•List•existing•cards
+096 : •5:•Set•bingo•card•size
+097 : 
+098 : Enter•6•numbers•for•your•card•(separated•by•'•')
+099 : You•entered
+100 : 9,•1,•2,•3,•4,•5
+101 : •0:•Exit
+102 : •1:•Play•bingo
+103 : •2:•Set•number•separator
+104 : •3:•Create•a•bingo•card
+105 : •4:•List•existing•cards
+106 : •5:•Set•bingo•card•size
+107 : 
+108 : Enter•6•numbers•for•your•card•(separated•by•'•')
+109 : You•entered
+110 : 6,•5,•4,•3,•2,•1
+111 : •0:•Exit
+112 : •1:•Play•bingo
+113 : •2:•Set•number•separator
+114 : •3:•Create•a•bingo•card
+115 : •4:•List•existing•cards
+116 : •5:•Set•bingo•card•size
+117 : 
+118 : Enter•6•numbers•for•your•card•(separated•by•'•')
+119 : You•entered
+120 : 7,•6,•5,•4,•3,•2
+121 : •0:•Exit
+122 : •1:•Play•bingo
+123 : •2:•Set•number•separator
+124 : •3:•Create•a•bingo•card
+125 : •4:•List•existing•cards
+126 : •5:•Set•bingo•card•size
+127 : 
+128 : Enter•6•numbers•for•your•card•(separated•by•'•')
+129 : You•entered
+130 : 8,•7,•6,•5,•4,•3
+131 : •0:•Exit
+132 : •1:•Play•bingo
+133 : •2:•Set•number•separator
+134 : •3:•Create•a•bingo•card
+135 : •4:•List•existing•cards
+136 : •5:•Set•bingo•card•size
+137 : 
+138 : Enter•6•numbers•for•your•card•(separated•by•'•')
+139 : You•entered
+140 : 9,•8,•7,•6,•5,•4
+141 : •0:•Exit
+142 : •1:•Play•bingo
+143 : •2:•Set•number•separator
+144 : •3:•Create•a•bingo•card
+145 : •4:•List•existing•cards
+146 : •5:•Set•bingo•card•size
+147 : 
+148 : Card••0•numbers:
+149 : •1••2••3
+150 : •4••5••6
+151 : Card••1•numbers:
+152 : •2••3••4
+153 : •5••6••7
+154 : Card••2•numbers:
+155 : •3••4••5
+156 : •6••7••8
+157 : Card••3•numbers:
+158 : •4••5••6
+159 : •7••8••9
+160 : Card••4•numbers:
+161 : •5••6••7
+162 : •8••9••1
+163 : Card••5•numbers:
+164 : •6••7••8
+165 : •9••1••2
+166 : Card••6•numbers:
+167 : •7••8••9
+168 : •1••2••3
+169 : Card••7•numbers:
+170 : •8••9••1
+171 : •2••3••4
+172 : Card••8•numbers:
+173 : •9••1••2
+174 : •3••4••5
+175 : Card••9•numbers:
+176 : •6••5••4
+177 : •3••2••1
+178 : Card•10•numbers:
+179 : •7••6••5
+180 : •4••3••2
+181 : Card•11•numbers:
+182 : •8••7••6
+183 : •5••4••3
+184 : Card•12•numbers:
+185 : •9••8••7
+186 : •6••5••4
+187 : •0:•Exit
+188 : •1:•Play•bingo
+189 : •2:•Set•number•separator
+190 : •3:•Create•a•bingo•card
+191 : •4:•List•existing•cards
+192 : •5:•Set•bingo•card•size
+193 : 
+194 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 7.00%</p></td></tr></table><hr><h4>Test 503</h4><p>Input data:<pre>5
+24
+14
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•24•rows•X•14•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•the•number•of•rows•for•the•card
+009 : Enter•the•number•of•columns•for•the•card
+010 : The•bingo•card•size•is•set•to•24•rows•X•14•columns
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 4.00%</p></td></tr></table><hr><h4>Test 110</h4><p>Input data:<pre>3
+1 2 3 4 5 9 8 7 6 16 15 14 13 12 11 10
+1
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+1
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 1,•2,•3,•4,•5,•9,•8,•7,•6,•16,•15,•14,•13,•12,•11,•10
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Eyes•down,•look•in!
+019 : Enter•the•next•number
+020 : Checking•card•0•for•1
+021 : Marked•off•1
+022 : Enter•the•next•number
+023 : Checking•card•0•for•2
+024 : Marked•off•2
+025 : Enter•the•next•number
+026 : Checking•card•0•for•3
+027 : Marked•off•3
+028 : Enter•the•next•number
+029 : Checking•card•0•for•4
+030 : Marked•off•4
+031 : Enter•the•next•number
+032 : Checking•card•0•for•5
+033 : Marked•off•5
+034 : Enter•the•next•number
+035 : Checking•card•0•for•6
+036 : Marked•off•6
+037 : Enter•the•next•number
+038 : Checking•card•0•for•7
+039 : Marked•off•7
+040 : Enter•the•next•number
+041 : Checking•card•0•for•8
+042 : Marked•off•8
+043 : Enter•the•next•number
+044 : Checking•card•0•for•9
+045 : Marked•off•9
+046 : Enter•the•next•number
+047 : Checking•card•0•for•10
+048 : Marked•off•10
+049 : Enter•the•next•number
+050 : Checking•card•0•for•11
+051 : Marked•off•11
+052 : Enter•the•next•number
+053 : Checking•card•0•for•12
+054 : Marked•off•12
+055 : Enter•the•next•number
+056 : Checking•card•0•for•13
+057 : Marked•off•13
+058 : Enter•the•next•number
+059 : Checking•card•0•for•14
+060 : Marked•off•14
+061 : Enter•the•next•number
+062 : Checking•card•0•for•15
+063 : Marked•off•15
+064 : Enter•the•next•number
+065 : Checking•card•0•for•16
+066 : Marked•off•16
+067 : And•the•winner•is•card•0
+068 : •0:•Exit
+069 : •1:•Play•bingo
+070 : •2:•Set•number•separator
+071 : •3:•Create•a•bingo•card
+072 : •4:•List•existing•cards
+073 : •5:•Set•bingo•card•size
+074 : 
+075 : Eyes•down,•look•in!
+076 : Enter•the•next•number
+077 : Checking•card•0•for•16
+078 : Marked•off•16
+079 : Enter•the•next•number
+080 : Checking•card•0•for•15
+081 : Marked•off•15
+082 : Enter•the•next•number
+083 : Checking•card•0•for•14
+084 : Marked•off•14
+085 : Enter•the•next•number
+086 : Checking•card•0•for•13
+087 : Marked•off•13
+088 : Enter•the•next•number
+089 : Checking•card•0•for•12
+090 : Marked•off•12
+091 : Enter•the•next•number
+092 : Checking•card•0•for•11
+093 : Marked•off•11
+094 : Enter•the•next•number
+095 : Checking•card•0•for•10
+096 : Marked•off•10
+097 : Enter•the•next•number
+098 : Checking•card•0•for•9
+099 : Marked•off•9
+100 : Enter•the•next•number
+101 : Checking•card•0•for•8
+102 : Marked•off•8
+103 : Enter•the•next•number
+104 : Checking•card•0•for•7
+105 : Marked•off•7
+106 : Enter•the•next•number
+107 : Checking•card•0•for•6
+108 : Marked•off•6
+109 : Enter•the•next•number
+110 : Checking•card•0•for•5
+111 : Marked•off•5
+112 : Enter•the•next•number
+113 : Checking•card•0•for•4
+114 : Marked•off•4
+115 : Enter•the•next•number
+116 : Checking•card•0•for•3
+117 : Marked•off•3
+118 : Enter•the•next•number
+119 : Checking•card•0•for•2
+120 : Marked•off•2
+121 : Enter•the•next•number
+122 : Checking•card•0•for•1
+123 : Marked•off•1
+124 : And•the•winner•is•card•0
+125 : •0:•Exit
+126 : •1:•Play•bingo
+127 : •2:•Set•number•separator
+128 : •3:•Create•a•bingo•card
+129 : •4:•List•existing•cards
+130 : •5:•Set•bingo•card•size
+131 : 
+132 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 1,•2,•3,•4,•5,•9,•8,•7,•6,•16,•15,•14,•13,•12,•11,•10
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Eyes•down,•look•in!
+019 : Enter•the•next•number
+020 : Checking•card•0•for•1
+021 : Marked•off•1
+022 : Enter•the•next•number
+023 : Checking•card•0•for•2
+024 : Marked•off•2
+025 : Enter•the•next•number
+026 : Checking•card•0•for•3
+027 : Marked•off•3
+028 : Enter•the•next•number
+029 : Checking•card•0•for•4
+030 : Marked•off•4
+031 : Enter•the•next•number
+032 : Checking•card•0•for•5
+033 : Marked•off•5
+034 : Enter•the•next•number
+035 : Checking•card•0•for•6
+036 : Marked•off•6
+037 : Enter•the•next•number
+038 : Checking•card•0•for•7
+039 : Marked•off•7
+040 : Enter•the•next•number
+041 : Checking•card•0•for•8
+042 : Marked•off•8
+043 : Enter•the•next•number
+044 : Checking•card•0•for•9
+045 : Marked•off•9
+046 : Enter•the•next•number
+047 : Checking•card•0•for•10
+048 : Marked•off•10
+049 : Enter•the•next•number
+050 : Checking•card•0•for•11
+051 : Marked•off•11
+052 : Enter•the•next•number
+053 : Checking•card•0•for•12
+054 : Marked•off•12
+055 : Enter•the•next•number
+056 : Checking•card•0•for•13
+057 : Marked•off•13
+058 : Enter•the•next•number
+059 : Checking•card•0•for•14
+060 : Marked•off•14
+061 : Enter•the•next•number
+062 : Checking•card•0•for•15
+063 : Marked•off•15
+064 : Enter•the•next•number
+065 : Checking•card•0•for•16
+066 : Marked•off•16
+067 : And•the•winner•is•card•0
+068 : •0:•Exit
+069 : •1:•Play•bingo
+070 : •2:•Set•number•separator
+071 : •3:•Create•a•bingo•card
+072 : •4:•List•existing•cards
+073 : •5:•Set•bingo•card•size
+074 : 
+075 : Eyes•down,•look•in!
+076 : Enter•the•next•number
+077 : Checking•card•0•for•16
+078 : Marked•off•16
+079 : Enter•the•next•number
+080 : Checking•card•0•for•15
+081 : Marked•off•15
+082 : Enter•the•next•number
+083 : Checking•card•0•for•14
+084 : Marked•off•14
+085 : Enter•the•next•number
+086 : Checking•card•0•for•13
+087 : Marked•off•13
+088 : Enter•the•next•number
+089 : Checking•card•0•for•12
+090 : Marked•off•12
+091 : Enter•the•next•number
+092 : Checking•card•0•for•11
+093 : Marked•off•11
+094 : Enter•the•next•number
+095 : Checking•card•0•for•10
+096 : Marked•off•10
+097 : Enter•the•next•number
+098 : Checking•card•0•for•9
+099 : Marked•off•9
+100 : Enter•the•next•number
+101 : Checking•card•0•for•8
+102 : Marked•off•8
+103 : Enter•the•next•number
+104 : Checking•card•0•for•7
+105 : Marked•off•7
+106 : Enter•the•next•number
+107 : Checking•card•0•for•6
+108 : Marked•off•6
+109 : Enter•the•next•number
+110 : Checking•card•0•for•5
+111 : Marked•off•5
+112 : Enter•the•next•number
+113 : Checking•card•0•for•4
+114 : Marked•off•4
+115 : Enter•the•next•number
+116 : Checking•card•0•for•3
+117 : Marked•off•3
+118 : Enter•the•next•number
+119 : Checking•card•0•for•2
+120 : Marked•off•2
+121 : Enter•the•next•number
+122 : Checking•card•0•for•1
+123 : Marked•off•1
+124 : And•the•winner•is•card•0
+125 : •0:•Exit
+126 : •1:•Play•bingo
+127 : •2:•Set•number•separator
+128 : •3:•Create•a•bingo•card
+129 : •4:•List•existing•cards
+130 : •5:•Set•bingo•card•size
+131 : 
+132 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 6.00%</p></td></tr></table><hr><h4>Test 112</h4><p>Input data:<pre>3
+1 2 3 4 5 9 8 7 6 16 15 14 13 12 11 10
+3
+2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32
+3
+51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66
+3
+21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36
+3
+71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86
+1
+21
+1
+2
+51
+21
+71
+22
+2
+4
+52
+72
+23
+9
+79
+24
+25
+26
+27
+28
+29
+30
+13
+63
+33
+32
+31
+84
+34
+35
+36
+0
+
+</pre></p><p>Note that spaces have been replaced with •</p><table><tr><td><p>Program output: <br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 1,•2,•3,•4,•5,•9,•8,•7,•6,•16,•15,•14,•13,•12,•11,•10
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•16•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 2,•4,•6,•8,•10,•12,•14,•16,•18,•20,•22,•24,•26,•28,•30,•32
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Enter•16•numbers•for•your•card•(separated•by•'•')
+029 : You•entered
+030 : 51,•52,•53,•54,•55,•56,•57,•58,•59,•60,•61,•62,•63,•64,•65,•66
+031 : •0:•Exit
+032 : •1:•Play•bingo
+033 : •2:•Set•number•separator
+034 : •3:•Create•a•bingo•card
+035 : •4:•List•existing•cards
+036 : •5:•Set•bingo•card•size
+037 : 
+038 : Enter•16•numbers•for•your•card•(separated•by•'•')
+039 : You•entered
+040 : 21,•22,•23,•24,•25,•26,•27,•28,•29,•30,•31,•32,•33,•34,•35,•36
+041 : •0:•Exit
+042 : •1:•Play•bingo
+043 : •2:•Set•number•separator
+044 : •3:•Create•a•bingo•card
+045 : •4:•List•existing•cards
+046 : •5:•Set•bingo•card•size
+047 : 
+048 : Enter•16•numbers•for•your•card•(separated•by•'•')
+049 : You•entered
+050 : 71,•72,•73,•74,•75,•76,•77,•78,•79,•80,•81,•82,•83,•84,•85,•86
+051 : •0:•Exit
+052 : •1:•Play•bingo
+053 : •2:•Set•number•separator
+054 : •3:•Create•a•bingo•card
+055 : •4:•List•existing•cards
+056 : •5:•Set•bingo•card•size
+057 : 
+058 : Eyes•down,•look•in!
+059 : Enter•the•next•number
+060 : Checking•card•0•for•21
+061 : Number•21•not•on•this•card
+062 : Checking•card•1•for•21
+063 : Number•21•not•on•this•card
+064 : Checking•card•2•for•21
+065 : Number•21•not•on•this•card
+066 : Checking•card•3•for•21
+067 : Marked•off•21
+068 : Checking•card•4•for•21
+069 : Number•21•not•on•this•card
+070 : Enter•the•next•number
+071 : Checking•card•0•for•1
+072 : Marked•off•1
+073 : Checking•card•1•for•1
+074 : Number•1•not•on•this•card
+075 : Checking•card•2•for•1
+076 : Number•1•not•on•this•card
+077 : Checking•card•3•for•1
+078 : Number•1•not•on•this•card
+079 : Checking•card•4•for•1
+080 : Number•1•not•on•this•card
+081 : Enter•the•next•number
+082 : Checking•card•0•for•2
+083 : Marked•off•2
+084 : Checking•card•1•for•2
+085 : Marked•off•2
+086 : Checking•card•2•for•2
+087 : Number•2•not•on•this•card
+088 : Checking•card•3•for•2
+089 : Number•2•not•on•this•card
+090 : Checking•card•4•for•2
+091 : Number•2•not•on•this•card
+092 : Enter•the•next•number
+093 : Checking•card•0•for•51
+094 : Number•51•not•on•this•card
+095 : Checking•card•1•for•51
+096 : Number•51•not•on•this•card
+097 : Checking•card•2•for•51
+098 : Marked•off•51
+099 : Checking•card•3•for•51
+100 : Number•51•not•on•this•card
+101 : Checking•card•4•for•51
+102 : Number•51•not•on•this•card
+103 : Enter•the•next•number
+104 : Checking•card•0•for•21
+105 : Number•21•not•on•this•card
+106 : Checking•card•1•for•21
+107 : Number•21•not•on•this•card
+108 : Checking•card•2•for•21
+109 : Number•21•not•on•this•card
+110 : Checking•card•3•for•21
+111 : Marked•off•21
+112 : Checking•card•4•for•21
+113 : Number•21•not•on•this•card
+114 : Enter•the•next•number
+115 : Checking•card•0•for•71
+116 : Number•71•not•on•this•card
+117 : Checking•card•1•for•71
+118 : Number•71•not•on•this•card
+119 : Checking•card•2•for•71
+120 : Number•71•not•on•this•card
+121 : Checking•card•3•for•71
+122 : Number•71•not•on•this•card
+123 : Checking•card•4•for•71
+124 : Marked•off•71
+125 : Enter•the•next•number
+126 : Checking•card•0•for•22
+127 : Number•22•not•on•this•card
+128 : Checking•card•1•for•22
+129 : Marked•off•22
+130 : Checking•card•2•for•22
+131 : Number•22•not•on•this•card
+132 : Checking•card•3•for•22
+133 : Marked•off•22
+134 : Checking•card•4•for•22
+135 : Number•22•not•on•this•card
+136 : Enter•the•next•number
+137 : Checking•card•0•for•2
+138 : Marked•off•2
+139 : Checking•card•1•for•2
+140 : Marked•off•2
+141 : Checking•card•2•for•2
+142 : Number•2•not•on•this•card
+143 : Checking•card•3•for•2
+144 : Number•2•not•on•this•card
+145 : Checking•card•4•for•2
+146 : Number•2•not•on•this•card
+147 : Enter•the•next•number
+148 : Checking•card•0•for•4
+149 : Marked•off•4
+150 : Checking•card•1•for•4
+151 : Marked•off•4
+152 : Checking•card•2•for•4
+153 : Number•4•not•on•this•card
+154 : Checking•card•3•for•4
+155 : Number•4•not•on•this•card
+156 : Checking•card•4•for•4
+157 : Number•4•not•on•this•card
+158 : Enter•the•next•number
+159 : Checking•card•0•for•52
+160 : Number•52•not•on•this•card
+161 : Checking•card•1•for•52
+162 : Number•52•not•on•this•card
+163 : Checking•card•2•for•52
+164 : Marked•off•52
+165 : Checking•card•3•for•52
+166 : Number•52•not•on•this•card
+167 : Checking•card•4•for•52
+168 : Number•52•not•on•this•card
+169 : Enter•the•next•number
+170 : Checking•card•0•for•72
+171 : Number•72•not•on•this•card
+172 : Checking•card•1•for•72
+173 : Number•72•not•on•this•card
+174 : Checking•card•2•for•72
+175 : Number•72•not•on•this•card
+176 : Checking•card•3•for•72
+177 : Number•72•not•on•this•card
+178 : Checking•card•4•for•72
+179 : Marked•off•72
+180 : Enter•the•next•number
+181 : Checking•card•0•for•23
+182 : Number•23•not•on•this•card
+183 : Checking•card•1•for•23
+184 : Number•23•not•on•this•card
+185 : Checking•card•2•for•23
+186 : Number•23•not•on•this•card
+187 : Checking•card•3•for•23
+188 : Marked•off•23
+189 : Checking•card•4•for•23
+190 : Number•23•not•on•this•card
+191 : Enter•the•next•number
+192 : Checking•card•0•for•9
+193 : Marked•off•9
+194 : Checking•card•1•for•9
+195 : Number•9•not•on•this•card
+196 : Checking•card•2•for•9
+197 : Number•9•not•on•this•card
+198 : Checking•card•3•for•9
+199 : Number•9•not•on•this•card
+200 : Checking•card•4•for•9
+201 : Number•9•not•on•this•card
+202 : Enter•the•next•number
+203 : Checking•card•0•for•79
+204 : Number•79•not•on•this•card
+205 : Checking•card•1•for•79
+206 : Number•79•not•on•this•card
+207 : Checking•card•2•for•79
+208 : Number•79•not•on•this•card
+209 : Checking•card•3•for•79
+210 : Number•79•not•on•this•card
+211 : Checking•card•4•for•79
+212 : Marked•off•79
+213 : Enter•the•next•number
+214 : Checking•card•0•for•24
+215 : Number•24•not•on•this•card
+216 : Checking•card•1•for•24
+217 : Marked•off•24
+218 : Checking•card•2•for•24
+219 : Number•24•not•on•this•card
+220 : Checking•card•3•for•24
+221 : Marked•off•24
+222 : Checking•card•4•for•24
+223 : Number•24•not•on•this•card
+224 : Enter•the•next•number
+225 : Checking•card•0•for•25
+226 : Number•25•not•on•this•card
+227 : Checking•card•1•for•25
+228 : Number•25•not•on•this•card
+229 : Checking•card•2•for•25
+230 : Number•25•not•on•this•card
+231 : Checking•card•3•for•25
+232 : Marked•off•25
+233 : Checking•card•4•for•25
+234 : Number•25•not•on•this•card
+235 : Enter•the•next•number
+236 : Checking•card•0•for•26
+237 : Number•26•not•on•this•card
+238 : Checking•card•1•for•26
+239 : Marked•off•26
+240 : Checking•card•2•for•26
+241 : Number•26•not•on•this•card
+242 : Checking•card•3•for•26
+243 : Marked•off•26
+244 : Checking•card•4•for•26
+245 : Number•26•not•on•this•card
+246 : Enter•the•next•number
+247 : Checking•card•0•for•27
+248 : Number•27•not•on•this•card
+249 : Checking•card•1•for•27
+250 : Number•27•not•on•this•card
+251 : Checking•card•2•for•27
+252 : Number•27•not•on•this•card
+253 : Checking•card•3•for•27
+254 : Marked•off•27
+255 : Checking•card•4•for•27
+256 : Number•27•not•on•this•card
+257 : Enter•the•next•number
+258 : Checking•card•0•for•28
+259 : Number•28•not•on•this•card
+260 : Checking•card•1•for•28
+261 : Marked•off•28
+262 : Checking•card•2•for•28
+263 : Number•28•not•on•this•card
+264 : Checking•card•3•for•28
+265 : Marked•off•28
+266 : Checking•card•4•for•28
+267 : Number•28•not•on•this•card
+268 : Enter•the•next•number
+269 : Checking•card•0•for•29
+270 : Number•29•not•on•this•card
+271 : Checking•card•1•for•29
+272 : Number•29•not•on•this•card
+273 : Checking•card•2•for•29
+274 : Number•29•not•on•this•card
+275 : Checking•card•3•for•29
+276 : Marked•off•29
+277 : Checking•card•4•for•29
+278 : Number•29•not•on•this•card
+279 : Enter•the•next•number
+280 : Checking•card•0•for•30
+281 : Number•30•not•on•this•card
+282 : Checking•card•1•for•30
+283 : Marked•off•30
+284 : Checking•card•2•for•30
+285 : Number•30•not•on•this•card
+286 : Checking•card•3•for•30
+287 : Marked•off•30
+288 : Checking•card•4•for•30
+289 : Number•30•not•on•this•card
+290 : Enter•the•next•number
+291 : Checking•card•0•for•13
+292 : Marked•off•13
+293 : Checking•card•1•for•13
+294 : Number•13•not•on•this•card
+295 : Checking•card•2•for•13
+296 : Number•13•not•on•this•card
+297 : Checking•card•3•for•13
+298 : Number•13•not•on•this•card
+299 : Checking•card•4•for•13
+300 : Number•13•not•on•this•card
+301 : Enter•the•next•number
+302 : Checking•card•0•for•63
+303 : Number•63•not•on•this•card
+304 : Checking•card•1•for•63
+305 : Number•63•not•on•this•card
+306 : Checking•card•2•for•63
+307 : Marked•off•63
+308 : Checking•card•3•for•63
+309 : Number•63•not•on•this•card
+310 : Checking•card•4•for•63
+311 : Number•63•not•on•this•card
+312 : Enter•the•next•number
+313 : Checking•card•0•for•33
+314 : Number•33•not•on•this•card
+315 : Checking•card•1•for•33
+316 : Number•33•not•on•this•card
+317 : Checking•card•2•for•33
+318 : Number•33•not•on•this•card
+319 : Checking•card•3•for•33
+320 : Marked•off•33
+321 : Checking•card•4•for•33
+322 : Number•33•not•on•this•card
+323 : Enter•the•next•number
+324 : Checking•card•0•for•32
+325 : Number•32•not•on•this•card
+326 : Checking•card•1•for•32
+327 : Marked•off•32
+328 : Checking•card•2•for•32
+329 : Number•32•not•on•this•card
+330 : Checking•card•3•for•32
+331 : Marked•off•32
+332 : Checking•card•4•for•32
+333 : Number•32•not•on•this•card
+334 : Enter•the•next•number
+335 : Checking•card•0•for•31
+336 : Number•31•not•on•this•card
+337 : Checking•card•1•for•31
+338 : Number•31•not•on•this•card
+339 : Checking•card•2•for•31
+340 : Number•31•not•on•this•card
+341 : Checking•card•3•for•31
+342 : Marked•off•31
+343 : Checking•card•4•for•31
+344 : Number•31•not•on•this•card
+345 : Enter•the•next•number
+346 : Checking•card•0•for•84
+347 : Number•84•not•on•this•card
+348 : Checking•card•1•for•84
+349 : Number•84•not•on•this•card
+350 : Checking•card•2•for•84
+351 : Number•84•not•on•this•card
+352 : Checking•card•3•for•84
+353 : Number•84•not•on•this•card
+354 : Checking•card•4•for•84
+355 : Marked•off•84
+356 : Enter•the•next•number
+357 : Checking•card•0•for•34
+358 : Number•34•not•on•this•card
+359 : Checking•card•1•for•34
+360 : Number•34•not•on•this•card
+361 : Checking•card•2•for•34
+362 : Number•34•not•on•this•card
+363 : Checking•card•3•for•34
+364 : Marked•off•34
+365 : Checking•card•4•for•34
+366 : Number•34•not•on•this•card
+367 : Enter•the•next•number
+368 : Checking•card•0•for•35
+369 : Number•35•not•on•this•card
+370 : Checking•card•1•for•35
+371 : Number•35•not•on•this•card
+372 : Checking•card•2•for•35
+373 : Number•35•not•on•this•card
+374 : Checking•card•3•for•35
+375 : Marked•off•35
+376 : Checking•card•4•for•35
+377 : Number•35•not•on•this•card
+378 : Enter•the•next•number
+379 : Checking•card•0•for•36
+380 : Number•36•not•on•this•card
+381 : Checking•card•1•for•36
+382 : Number•36•not•on•this•card
+383 : Checking•card•2•for•36
+384 : Number•36•not•on•this•card
+385 : Checking•card•3•for•36
+386 : Marked•off•36
+387 : Checking•card•4•for•36
+388 : Number•36•not•on•this•card
+389 : And•the•winner•is•card•3
+390 : •0:•Exit
+391 : •1:•Play•bingo
+392 : •2:•Set•number•separator
+393 : •3:•Create•a•bingo•card
+394 : •4:•List•existing•cards
+395 : •5:•Set•bingo•card•size
+396 : 
+397 : Thank•you•for•playing
+</pre></p></td><td><p>Expected output:<br><pre>001 : •0:•Exit
+002 : •1:•Play•bingo
+003 : •2:•Set•number•separator
+004 : •3:•Create•a•bingo•card
+005 : •4:•List•existing•cards
+006 : •5:•Set•bingo•card•size
+007 : 
+008 : Enter•16•numbers•for•your•card•(separated•by•'•')
+009 : You•entered
+010 : 1,•2,•3,•4,•5,•9,•8,•7,•6,•16,•15,•14,•13,•12,•11,•10
+011 : •0:•Exit
+012 : •1:•Play•bingo
+013 : •2:•Set•number•separator
+014 : •3:•Create•a•bingo•card
+015 : •4:•List•existing•cards
+016 : •5:•Set•bingo•card•size
+017 : 
+018 : Enter•16•numbers•for•your•card•(separated•by•'•')
+019 : You•entered
+020 : 2,•4,•6,•8,•10,•12,•14,•16,•18,•20,•22,•24,•26,•28,•30,•32
+021 : •0:•Exit
+022 : •1:•Play•bingo
+023 : •2:•Set•number•separator
+024 : •3:•Create•a•bingo•card
+025 : •4:•List•existing•cards
+026 : •5:•Set•bingo•card•size
+027 : 
+028 : Enter•16•numbers•for•your•card•(separated•by•'•')
+029 : You•entered
+030 : 51,•52,•53,•54,•55,•56,•57,•58,•59,•60,•61,•62,•63,•64,•65,•66
+031 : •0:•Exit
+032 : •1:•Play•bingo
+033 : •2:•Set•number•separator
+034 : •3:•Create•a•bingo•card
+035 : •4:•List•existing•cards
+036 : •5:•Set•bingo•card•size
+037 : 
+038 : Enter•16•numbers•for•your•card•(separated•by•'•')
+039 : You•entered
+040 : 21,•22,•23,•24,•25,•26,•27,•28,•29,•30,•31,•32,•33,•34,•35,•36
+041 : •0:•Exit
+042 : •1:•Play•bingo
+043 : •2:•Set•number•separator
+044 : •3:•Create•a•bingo•card
+045 : •4:•List•existing•cards
+046 : •5:•Set•bingo•card•size
+047 : 
+048 : Enter•16•numbers•for•your•card•(separated•by•'•')
+049 : You•entered
+050 : 71,•72,•73,•74,•75,•76,•77,•78,•79,•80,•81,•82,•83,•84,•85,•86
+051 : •0:•Exit
+052 : •1:•Play•bingo
+053 : •2:•Set•number•separator
+054 : •3:•Create•a•bingo•card
+055 : •4:•List•existing•cards
+056 : •5:•Set•bingo•card•size
+057 : 
+058 : Eyes•down,•look•in!
+059 : Enter•the•next•number
+060 : Checking•card•0•for•21
+061 : Number•21•not•on•this•card
+062 : Checking•card•1•for•21
+063 : Number•21•not•on•this•card
+064 : Checking•card•2•for•21
+065 : Number•21•not•on•this•card
+066 : Checking•card•3•for•21
+067 : Marked•off•21
+068 : Checking•card•4•for•21
+069 : Number•21•not•on•this•card
+070 : Enter•the•next•number
+071 : Checking•card•0•for•1
+072 : Marked•off•1
+073 : Checking•card•1•for•1
+074 : Number•1•not•on•this•card
+075 : Checking•card•2•for•1
+076 : Number•1•not•on•this•card
+077 : Checking•card•3•for•1
+078 : Number•1•not•on•this•card
+079 : Checking•card•4•for•1
+080 : Number•1•not•on•this•card
+081 : Enter•the•next•number
+082 : Checking•card•0•for•2
+083 : Marked•off•2
+084 : Checking•card•1•for•2
+085 : Marked•off•2
+086 : Checking•card•2•for•2
+087 : Number•2•not•on•this•card
+088 : Checking•card•3•for•2
+089 : Number•2•not•on•this•card
+090 : Checking•card•4•for•2
+091 : Number•2•not•on•this•card
+092 : Enter•the•next•number
+093 : Checking•card•0•for•51
+094 : Number•51•not•on•this•card
+095 : Checking•card•1•for•51
+096 : Number•51•not•on•this•card
+097 : Checking•card•2•for•51
+098 : Marked•off•51
+099 : Checking•card•3•for•51
+100 : Number•51•not•on•this•card
+101 : Checking•card•4•for•51
+102 : Number•51•not•on•this•card
+103 : Enter•the•next•number
+104 : Checking•card•0•for•21
+105 : Number•21•not•on•this•card
+106 : Checking•card•1•for•21
+107 : Number•21•not•on•this•card
+108 : Checking•card•2•for•21
+109 : Number•21•not•on•this•card
+110 : Checking•card•3•for•21
+111 : Marked•off•21
+112 : Checking•card•4•for•21
+113 : Number•21•not•on•this•card
+114 : Enter•the•next•number
+115 : Checking•card•0•for•71
+116 : Number•71•not•on•this•card
+117 : Checking•card•1•for•71
+118 : Number•71•not•on•this•card
+119 : Checking•card•2•for•71
+120 : Number•71•not•on•this•card
+121 : Checking•card•3•for•71
+122 : Number•71•not•on•this•card
+123 : Checking•card•4•for•71
+124 : Marked•off•71
+125 : Enter•the•next•number
+126 : Checking•card•0•for•22
+127 : Number•22•not•on•this•card
+128 : Checking•card•1•for•22
+129 : Marked•off•22
+130 : Checking•card•2•for•22
+131 : Number•22•not•on•this•card
+132 : Checking•card•3•for•22
+133 : Marked•off•22
+134 : Checking•card•4•for•22
+135 : Number•22•not•on•this•card
+136 : Enter•the•next•number
+137 : Checking•card•0•for•2
+138 : Marked•off•2
+139 : Checking•card•1•for•2
+140 : Marked•off•2
+141 : Checking•card•2•for•2
+142 : Number•2•not•on•this•card
+143 : Checking•card•3•for•2
+144 : Number•2•not•on•this•card
+145 : Checking•card•4•for•2
+146 : Number•2•not•on•this•card
+147 : Enter•the•next•number
+148 : Checking•card•0•for•4
+149 : Marked•off•4
+150 : Checking•card•1•for•4
+151 : Marked•off•4
+152 : Checking•card•2•for•4
+153 : Number•4•not•on•this•card
+154 : Checking•card•3•for•4
+155 : Number•4•not•on•this•card
+156 : Checking•card•4•for•4
+157 : Number•4•not•on•this•card
+158 : Enter•the•next•number
+159 : Checking•card•0•for•52
+160 : Number•52•not•on•this•card
+161 : Checking•card•1•for•52
+162 : Number•52•not•on•this•card
+163 : Checking•card•2•for•52
+164 : Marked•off•52
+165 : Checking•card•3•for•52
+166 : Number•52•not•on•this•card
+167 : Checking•card•4•for•52
+168 : Number•52•not•on•this•card
+169 : Enter•the•next•number
+170 : Checking•card•0•for•72
+171 : Number•72•not•on•this•card
+172 : Checking•card•1•for•72
+173 : Number•72•not•on•this•card
+174 : Checking•card•2•for•72
+175 : Number•72•not•on•this•card
+176 : Checking•card•3•for•72
+177 : Number•72•not•on•this•card
+178 : Checking•card•4•for•72
+179 : Marked•off•72
+180 : Enter•the•next•number
+181 : Checking•card•0•for•23
+182 : Number•23•not•on•this•card
+183 : Checking•card•1•for•23
+184 : Number•23•not•on•this•card
+185 : Checking•card•2•for•23
+186 : Number•23•not•on•this•card
+187 : Checking•card•3•for•23
+188 : Marked•off•23
+189 : Checking•card•4•for•23
+190 : Number•23•not•on•this•card
+191 : Enter•the•next•number
+192 : Checking•card•0•for•9
+193 : Marked•off•9
+194 : Checking•card•1•for•9
+195 : Number•9•not•on•this•card
+196 : Checking•card•2•for•9
+197 : Number•9•not•on•this•card
+198 : Checking•card•3•for•9
+199 : Number•9•not•on•this•card
+200 : Checking•card•4•for•9
+201 : Number•9•not•on•this•card
+202 : Enter•the•next•number
+203 : Checking•card•0•for•79
+204 : Number•79•not•on•this•card
+205 : Checking•card•1•for•79
+206 : Number•79•not•on•this•card
+207 : Checking•card•2•for•79
+208 : Number•79•not•on•this•card
+209 : Checking•card•3•for•79
+210 : Number•79•not•on•this•card
+211 : Checking•card•4•for•79
+212 : Marked•off•79
+213 : Enter•the•next•number
+214 : Checking•card•0•for•24
+215 : Number•24•not•on•this•card
+216 : Checking•card•1•for•24
+217 : Marked•off•24
+218 : Checking•card•2•for•24
+219 : Number•24•not•on•this•card
+220 : Checking•card•3•for•24
+221 : Marked•off•24
+222 : Checking•card•4•for•24
+223 : Number•24•not•on•this•card
+224 : Enter•the•next•number
+225 : Checking•card•0•for•25
+226 : Number•25•not•on•this•card
+227 : Checking•card•1•for•25
+228 : Number•25•not•on•this•card
+229 : Checking•card•2•for•25
+230 : Number•25•not•on•this•card
+231 : Checking•card•3•for•25
+232 : Marked•off•25
+233 : Checking•card•4•for•25
+234 : Number•25•not•on•this•card
+235 : Enter•the•next•number
+236 : Checking•card•0•for•26
+237 : Number•26•not•on•this•card
+238 : Checking•card•1•for•26
+239 : Marked•off•26
+240 : Checking•card•2•for•26
+241 : Number•26•not•on•this•card
+242 : Checking•card•3•for•26
+243 : Marked•off•26
+244 : Checking•card•4•for•26
+245 : Number•26•not•on•this•card
+246 : Enter•the•next•number
+247 : Checking•card•0•for•27
+248 : Number•27•not•on•this•card
+249 : Checking•card•1•for•27
+250 : Number•27•not•on•this•card
+251 : Checking•card•2•for•27
+252 : Number•27•not•on•this•card
+253 : Checking•card•3•for•27
+254 : Marked•off•27
+255 : Checking•card•4•for•27
+256 : Number•27•not•on•this•card
+257 : Enter•the•next•number
+258 : Checking•card•0•for•28
+259 : Number•28•not•on•this•card
+260 : Checking•card•1•for•28
+261 : Marked•off•28
+262 : Checking•card•2•for•28
+263 : Number•28•not•on•this•card
+264 : Checking•card•3•for•28
+265 : Marked•off•28
+266 : Checking•card•4•for•28
+267 : Number•28•not•on•this•card
+268 : Enter•the•next•number
+269 : Checking•card•0•for•29
+270 : Number•29•not•on•this•card
+271 : Checking•card•1•for•29
+272 : Number•29•not•on•this•card
+273 : Checking•card•2•for•29
+274 : Number•29•not•on•this•card
+275 : Checking•card•3•for•29
+276 : Marked•off•29
+277 : Checking•card•4•for•29
+278 : Number•29•not•on•this•card
+279 : Enter•the•next•number
+280 : Checking•card•0•for•30
+281 : Number•30•not•on•this•card
+282 : Checking•card•1•for•30
+283 : Marked•off•30
+284 : Checking•card•2•for•30
+285 : Number•30•not•on•this•card
+286 : Checking•card•3•for•30
+287 : Marked•off•30
+288 : Checking•card•4•for•30
+289 : Number•30•not•on•this•card
+290 : Enter•the•next•number
+291 : Checking•card•0•for•13
+292 : Marked•off•13
+293 : Checking•card•1•for•13
+294 : Number•13•not•on•this•card
+295 : Checking•card•2•for•13
+296 : Number•13•not•on•this•card
+297 : Checking•card•3•for•13
+298 : Number•13•not•on•this•card
+299 : Checking•card•4•for•13
+300 : Number•13•not•on•this•card
+301 : Enter•the•next•number
+302 : Checking•card•0•for•63
+303 : Number•63•not•on•this•card
+304 : Checking•card•1•for•63
+305 : Number•63•not•on•this•card
+306 : Checking•card•2•for•63
+307 : Marked•off•63
+308 : Checking•card•3•for•63
+309 : Number•63•not•on•this•card
+310 : Checking•card•4•for•63
+311 : Number•63•not•on•this•card
+312 : Enter•the•next•number
+313 : Checking•card•0•for•33
+314 : Number•33•not•on•this•card
+315 : Checking•card•1•for•33
+316 : Number•33•not•on•this•card
+317 : Checking•card•2•for•33
+318 : Number•33•not•on•this•card
+319 : Checking•card•3•for•33
+320 : Marked•off•33
+321 : Checking•card•4•for•33
+322 : Number•33•not•on•this•card
+323 : Enter•the•next•number
+324 : Checking•card•0•for•32
+325 : Number•32•not•on•this•card
+326 : Checking•card•1•for•32
+327 : Marked•off•32
+328 : Checking•card•2•for•32
+329 : Number•32•not•on•this•card
+330 : Checking•card•3•for•32
+331 : Marked•off•32
+332 : Checking•card•4•for•32
+333 : Number•32•not•on•this•card
+334 : Enter•the•next•number
+335 : Checking•card•0•for•31
+336 : Number•31•not•on•this•card
+337 : Checking•card•1•for•31
+338 : Number•31•not•on•this•card
+339 : Checking•card•2•for•31
+340 : Number•31•not•on•this•card
+341 : Checking•card•3•for•31
+342 : Marked•off•31
+343 : Checking•card•4•for•31
+344 : Number•31•not•on•this•card
+345 : Enter•the•next•number
+346 : Checking•card•0•for•84
+347 : Number•84•not•on•this•card
+348 : Checking•card•1•for•84
+349 : Number•84•not•on•this•card
+350 : Checking•card•2•for•84
+351 : Number•84•not•on•this•card
+352 : Checking•card•3•for•84
+353 : Number•84•not•on•this•card
+354 : Checking•card•4•for•84
+355 : Marked•off•84
+356 : Enter•the•next•number
+357 : Checking•card•0•for•34
+358 : Number•34•not•on•this•card
+359 : Checking•card•1•for•34
+360 : Number•34•not•on•this•card
+361 : Checking•card•2•for•34
+362 : Number•34•not•on•this•card
+363 : Checking•card•3•for•34
+364 : Marked•off•34
+365 : Checking•card•4•for•34
+366 : Number•34•not•on•this•card
+367 : Enter•the•next•number
+368 : Checking•card•0•for•35
+369 : Number•35•not•on•this•card
+370 : Checking•card•1•for•35
+371 : Number•35•not•on•this•card
+372 : Checking•card•2•for•35
+373 : Number•35•not•on•this•card
+374 : Checking•card•3•for•35
+375 : Marked•off•35
+376 : Checking•card•4•for•35
+377 : Number•35•not•on•this•card
+378 : Enter•the•next•number
+379 : Checking•card•0•for•36
+380 : Number•36•not•on•this•card
+381 : Checking•card•1•for•36
+382 : Number•36•not•on•this•card
+383 : Checking•card•2•for•36
+384 : Number•36•not•on•this•card
+385 : Checking•card•3•for•36
+386 : Marked•off•36
+387 : Checking•card•4•for•36
+388 : Number•36•not•on•this•card
+389 : And•the•winner•is•card•3
+390 : •0:•Exit
+391 : •1:•Play•bingo
+392 : •2:•Set•number•separator
+393 : •3:•Create•a•bingo•card
+394 : •4:•List•existing•cards
+395 : •5:•Set•bingo•card•size
+396 : 
+397 : Thank•you•for•playing
+</pre></p></td><td><p><br>&#10003</p></td><td><p><br>Exact match: 4.00%</p></td></tr></table><hr></div></div></body></html>
